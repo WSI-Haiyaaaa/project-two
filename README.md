@@ -72,4 +72,4 @@ This project will be completed in a 6-week cycle by a group of 4 members.
 * Since there isn’t any feature that requires the user to have an account, it isn’t necessary to create user logins.
 * Information from the feedback form will only be stored in the database, no actual emails will be sent out nor an admin view to manage the information.
 
-//test test
+//this is a test for pull request, please ignore me
