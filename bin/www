@@ -6,7 +6,7 @@
 
 var app = require('../app');
 var debug = require('debug')('travelbriefing:server');
-var http = require('http');
+var fs = require('fs');
 
 /**
  * Get port from environment and store in Express.
@@ -14,6 +14,16 @@ var http = require('http');
 
 var port = normalizePort(process.env.PORT || '3000');
 app.set('port', port);
+
+if (process.env.LOCALHOST_SSL_KEY && process.env.LOCALHOST_SSL_KEY) {
+  var https = require('https');
+  var key = fs.readFileSync(process.env.LOCALHOST_SSL_KEY);
+  var cert = fs.readFileSync(process.env.LOCALHOST_SSL_CERT);
+  var server = https.createServer({key: key, cert: cert}, app);
+} else {
+  var http = require('http');
+  var server = http.createServer(app);
+}
 
 /**
  * Create HTTP server.
