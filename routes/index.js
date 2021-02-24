@@ -5,6 +5,8 @@ var router = express.Router();
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Travelbriefing', greeting: 'Hello!' });
 });
+
+//testing json for API
 router.get('/index.json', function(req, res, next) {
   res.json({ title: 'Travelbriefing', greeting: 'Hello!' });
 });
