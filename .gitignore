@@ -59,3 +59,7 @@ typings/
 
 # next.js build output
 .next
+
+# backstop report files
+backstop_data/bitmaps_test/
+backstop_data/html_report/

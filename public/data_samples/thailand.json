@@ -1,0 +1,859 @@
+{
+    "names": {
+        "name": "Thailand",
+        "full": "Kingdom of Thailand",
+        "iso2": "TH",
+        "iso3": "THA",
+        "continent": "AS"
+    },
+    "maps": {
+        "lat": "13.0389361",
+        "long": "101.490104",
+        "zoom": "6"
+    },
+    "timezone": {
+        "name": "Asia\/Bangkok"
+    },
+    "language": [
+        {
+            "language": "Thai",
+            "official": "Yes"
+        },
+        {
+            "language": "English",
+            "official": "No"
+        }
+    ],
+    "electricity": {
+        "voltage": "230",
+        "frequency": "50",
+        "plugs": [
+            "A",
+            "B",
+            "C",
+            "J"
+        ]
+    },
+    "telephone": {
+        "calling_code": "66",
+        "police": "191",
+        "ambulance": "1669",
+        "fire": "199"
+    },
+    "water": {
+        "short": "not safe",
+        "full": ""
+    },
+    "vaccinations": [
+        {
+            "name": "Malaria",
+            "message": "Malaria occurs in some areas. Protect yourself from mosquito bites. Precautions are personal. Consult a qualified medical professional to determine the right actions"
+        },
+        {
+            "name": "Hepatitis A",
+            "message": "Vaccination is recommended for all travelers to this country"
+        },
+        {
+            "name": "Hepatitis B",
+            "message": "The vaccination advice is personal. Consult a qualified medical professional to determine whether vaccination is useful for you"
+        },
+        {
+            "name": "Tyfoid",
+            "message": "The vaccination advice is personal. Consult a qualified medical professional to determine whether vaccination is useful for you"
+        },
+        {
+            "name": "DTP",
+            "message": "Vaccination is recommended for all travelers to this country"
+        }
+    ],
+    "currency": {
+        "name": "Baht",
+        "code": "THB",
+        "symbol": "?",
+        "rate": "30.429814",
+        "compare": [
+            {
+                "name": "Afghani",
+                "rate": "77.659297"
+            },
+            {
+                "name": "Algerian Dinar",
+                "rate": "132.856652"
+            },
+            {
+                "name": "Argentine Peso",
+                "rate": "89.918783"
+            },
+            {
+                "name": "Armenian Dram",
+                "rate": "527.959883"
+            },
+            {
+                "name": "Aruban Florin",
+                "rate": "1.8"
+            },
+            {
+                "name": "Australian Dollar",
+                "rate": "1.289973"
+            },
+            {
+                "name": "Azerbaijanian Manat",
+                "rate": "1.702159"
+            },
+            {
+                "name": "Bahamian Dollar",
+                "rate": "1.001907"
+            },
+            {
+                "name": "Bahraini Dinar",
+                "rate": "0.376868"
+            },
+            {
+                "name": "Baht",
+                "rate": "30.429814"
+            },
+            {
+                "name": "Balboa",
+                "rate": "0.999719"
+            },
+            {
+                "name": "Barbados Dollar",
+                "rate": "2.02294"
+            },
+            {
+                "name": "Belarussian Ruble",
+                "rate": "19600"
+            },
+            {
+                "name": "Belize Dollar",
+                "rate": "2.019547"
+            },
+            {
+                "name": "Bermudian Dollar",
+                "rate": "1"
+            },
+            {
+                "name": "Bolivar",
+                "rate": "9.987495"
+            },
+            {
+                "name": "Boliviano",
+                "rate": "6.893001"
+            },
+            {
+                "name": "Brazilian Real",
+                "rate": "5.603897"
+            },
+            {
+                "name": "Brunei Dollar",
+                "rate": "1.332451"
+            },
+            {
+                "name": "Bulgarian Lev",
+                "rate": "1.61381"
+            },
+            {
+                "name": "Burundi Franc",
+                "rate": "1948.434882"
+            },
+            {
+                "name": "Canadian Dollar",
+                "rate": "1.270249"
+            },
+            {
+                "name": "Cape Verde Escudo",
+                "rate": "91.049841"
+            },
+            {
+                "name": "Cayman Islands Dollar",
+                "rate": "0.834913"
+            },
+            {
+                "name": "CFA Franc BCEAO",
+                "rate": "542.833262"
+            },
+            {
+                "name": "CFA Franc BEAC",
+                "rate": "542.855724"
+            },
+            {
+                "name": "CFP Franc",
+                "rate": "98.604944"
+            },
+            {
+                "name": "Chilean Peso",
+                "rate": "723.898764"
+            },
+            {
+                "name": "Colombian Peso",
+                "rate": "3647"
+            },
+            {
+                "name": "Comoro Franc",
+                "rate": "405.049986"
+            },
+            {
+                "name": "Congolese Franc",
+                "rate": "1987.000022"
+            },
+            {
+                "name": "Convertible Mark",
+                "rate": "1.615"
+            },
+            {
+                "name": "Cordoba Oro",
+                "rate": "34.96665"
+            },
+            {
+                "name": "Costa Rican Colon",
+                "rate": "613.064869"
+            },
+            {
+                "name": "Croatian Kuna",
+                "rate": "6.278903"
+            },
+            {
+                "name": "Cuban Peso",
+                "rate": "26.5"
+            },
+            {
+                "name": "Czech Koruna",
+                "rate": "21.6494"
+            },
+            {
+                "name": "Dalasi",
+                "rate": "51.250188"
+            },
+            {
+                "name": "Danish Krone",
+                "rate": "6.153404"
+            },
+            {
+                "name": "Denar",
+                "rate": "50.989333"
+            },
+            {
+                "name": "Djibouti Franc",
+                "rate": "178.360553"
+            },
+            {
+                "name": "Dobra",
+                "rate": "20282.133983"
+            },
+            {
+                "name": "Dominican Peso",
+                "rate": "57.941582"
+            },
+            {
+                "name": "Dong",
+                "rate": "23016.5"
+            },
+            {
+                "name": "East Caribbean Dollar",
+                "rate": "2.70255"
+            },
+            {
+                "name": "Egyptian Pound",
+                "rate": "15.687992"
+            },
+            {
+                "name": "El Salvador Colon",
+                "rate": "8.767037"
+            },
+            {
+                "name": "Ethiopian Birr",
+                "rate": "40.429758"
+            },
+            {
+                "name": "Euro",
+                "rate": "0.82748"
+            },
+            {
+                "name": "Falkland Islands Pound",
+                "rate": "0.714786"
+            },
+            {
+                "name": "Fiji Dollar",
+                "rate": "2.00285"
+            },
+            {
+                "name": "Forint",
+                "rate": "299.789833"
+            },
+            {
+                "name": "Ghana Cedi",
+                "rate": "5.748365"
+            },
+            {
+                "name": "Gibraltar Pound",
+                "rate": "0.714786"
+            },
+            {
+                "name": "Gourde",
+                "rate": "76.176684"
+            },
+            {
+                "name": "Guarani",
+                "rate": "6634.944016"
+            },
+            {
+                "name": "Guinea Franc",
+                "rate": "10168.617666"
+            },
+            {
+                "name": "Guyana Dollar",
+                "rate": "209.150813"
+            },
+            {
+                "name": "Hong Kong Dollar",
+                "rate": "7.75605"
+            },
+            {
+                "name": "Hryvnia",
+                "rate": "28.009633"
+            },
+            {
+                "name": "Iceland Krona",
+                "rate": "127.190046"
+            },
+            {
+                "name": "Indian Rupee",
+                "rate": "73.607502"
+            },
+            {
+                "name": "Iranian Rial",
+                "rate": "42105.000409"
+            },
+            {
+                "name": "Iraqi Dinar",
+                "rate": "1461.779723"
+            },
+            {
+                "name": "Jamaican Dollar",
+                "rate": "151.126118"
+            },
+            {
+                "name": "Jordanian Dinar",
+                "rate": "0.708971"
+            },
+            {
+                "name": "Kenyan Shilling",
+                "rate": "109.80026"
+            },
+            {
+                "name": "Kina",
+                "rate": "3.563011"
+            },
+            {
+                "name": "Kip",
+                "rate": "9361.795447"
+            },
+            {
+                "name": "Kuwaiti Dinar",
+                "rate": "0.30273"
+            },
+            {
+                "name": "Kwacha",
+                "rate": "782.806662"
+            },
+            {
+                "name": "Kwanza",
+                "rate": "635.949835"
+            },
+            {
+                "name": "Kyat",
+                "rate": "1412.678056"
+            },
+            {
+                "name": "Lari",
+                "rate": "3.325021"
+            },
+            {
+                "name": "Lebanese Pound",
+                "rate": "1515.073776"
+            },
+            {
+                "name": "Lek",
+                "rate": "102.400291"
+            },
+            {
+                "name": "Lempira",
+                "rate": "24.134464"
+            },
+            {
+                "name": "Leone",
+                "rate": "10195.999608"
+            },
+            {
+                "name": "Liberian Dollar",
+                "rate": "173.425011"
+            },
+            {
+                "name": "Libyan Dinar",
+                "rate": "4.450531"
+            },
+            {
+                "name": "Lilangeni",
+                "rate": "15.021495"
+            },
+            {
+                "name": "Lithuanian Litas",
+                "rate": "2.95274"
+            },
+            {
+                "name": "Loti",
+                "rate": "14.520201"
+            },
+            {
+                "name": "Malagasy Ariary",
+                "rate": "3729.959657"
+            },
+            {
+                "name": "Malaysian Ringgit",
+                "rate": "4.055503"
+            },
+            {
+                "name": "Mauritius Rupee",
+                "rate": "39.819964"
+            },
+            {
+                "name": "Mexican Peso",
+                "rate": "20.76899"
+            },
+            {
+                "name": "Moldovan Leu",
+                "rate": "17.508255"
+            },
+            {
+                "name": "Moroccan Dirham",
+                "rate": "8.941158"
+            },
+            {
+                "name": "Mozambique Metical",
+                "rate": "74.869988"
+            },
+            {
+                "name": "Naira",
+                "rate": "381.079965"
+            },
+            {
+                "name": "Nakfa",
+                "rate": "15.000406"
+            },
+            {
+                "name": "Namibia Dollar",
+                "rate": "14.529824"
+            },
+            {
+                "name": "Nepalese Rupee",
+                "rate": "117.271828"
+            },
+            {
+                "name": "Netherlands Antillean Guilder",
+                "rate": "1.798478"
+            },
+            {
+                "name": "New Israeli Sheqel",
+                "rate": "3.313479"
+            },
+            {
+                "name": "New Romanian Leu",
+                "rate": "4.036296"
+            },
+            {
+                "name": "New Taiwan Dollar",
+                "rate": "27.870497"
+            },
+            {
+                "name": "New Zealand Dollar",
+                "rate": "1.37466"
+            },
+            {
+                "name": "Ngultrum",
+                "rate": "73.132432"
+            },
+            {
+                "name": "North Korean Won",
+                "rate": "900.007023"
+            },
+            {
+                "name": "Norwegian Krone",
+                "rate": "8.617702"
+            },
+            {
+                "name": "Nuevo Sol",
+                "rate": "3.647444"
+            },
+            {
+                "name": "Ouguiya",
+                "rate": "356.999828"
+            },
+            {
+                "name": "Pa'anga",
+                "rate": "2.271981"
+            },
+            {
+                "name": "Pakistan Rupee",
+                "rate": "158.099711"
+            },
+            {
+                "name": "Pataca",
+                "rate": "8.004121"
+            },
+            {
+                "name": "Peso Convertible",
+                "rate": "1"
+            },
+            {
+                "name": "Peso Uruguayo",
+                "rate": "43.052253"
+            },
+            {
+                "name": "Philippine Peso",
+                "rate": "48.610503"
+            },
+            {
+                "name": "Pound Sterling",
+                "rate": "0.714815"
+            },
+            {
+                "name": "Pula",
+                "rate": "11.009893"
+            },
+            {
+                "name": "Qatari Rial",
+                "rate": "3.641001"
+            },
+            {
+                "name": "Quetzal",
+                "rate": "7.700241"
+            },
+            {
+                "name": "Rand",
+                "rate": "15.029905"
+            },
+            {
+                "name": "Rial Omani",
+                "rate": "0.384752"
+            },
+            {
+                "name": "Riel",
+                "rate": "4078.715983"
+            },
+            {
+                "name": "Rufiyaa",
+                "rate": "15.399323"
+            },
+            {
+                "name": "Rupiah",
+                "rate": "14275.75"
+            },
+            {
+                "name": "Russian Ruble",
+                "rate": "74.526503"
+            },
+            {
+                "name": "Rwanda Franc",
+                "rate": "995.21246"
+            },
+            {
+                "name": "Saint Helena Pound",
+                "rate": "0.714786"
+            },
+            {
+                "name": "Saudi Riyal",
+                "rate": "3.75045"
+            },
+            {
+                "name": "SDR (Special Drawing Right)",
+                "rate": "0.692489"
+            },
+            {
+                "name": "Serbian Dinar",
+                "rate": "97.278197"
+            },
+            {
+                "name": "Seychelles Rupee",
+                "rate": "21.112913"
+            },
+            {
+                "name": "Singapore Dollar",
+                "rate": "1.3305"
+            },
+            {
+                "name": "Solomon Islands Dollar",
+                "rate": "7.981171"
+            },
+            {
+                "name": "Som",
+                "rate": "84.750144"
+            },
+            {
+                "name": "Somali Shilling",
+                "rate": "586.000047"
+            },
+            {
+                "name": "Somoni",
+                "rate": "11.391696"
+            },
+            {
+                "name": "South Sudanese Pound",
+                "rate": "0"
+            },
+            {
+                "name": "Sri Lanka Rupee",
+                "rate": "194.870199"
+            },
+            {
+                "name": "Sudanese Pound",
+                "rate": "375.492558"
+            },
+            {
+                "name": "Surinam Dollar",
+                "rate": "14.154012"
+            },
+            {
+                "name": "Swedish Krona",
+                "rate": "8.420794"
+            },
+            {
+                "name": "Swiss Franc",
+                "rate": "0.90849"
+            },
+            {
+                "name": "Syrian Pound",
+                "rate": "512.775718"
+            },
+            {
+                "name": "Taka",
+                "rate": "84.770528"
+            },
+            {
+                "name": "Tala",
+                "rate": "2.509222"
+            },
+            {
+                "name": "Tanzanian Shilling",
+                "rate": "2318.736982"
+            },
+            {
+                "name": "Tenge",
+                "rate": "418.532096"
+            },
+            {
+                "name": "Trinidad and Tobago Dollar",
+                "rate": "6.800536"
+            },
+            {
+                "name": "Tugrik",
+                "rate": "2847.000982"
+            },
+            {
+                "name": "Tunisian Dinar",
+                "rate": "2.7075"
+            },
+            {
+                "name": "Turkish Lira",
+                "rate": "7.40677"
+            },
+            {
+                "name": "Turkmenistan New Manat",
+                "rate": "3.51"
+            },
+            {
+                "name": "UAE Dirham",
+                "rate": "3.673197"
+            },
+            {
+                "name": "Uganda Shilling",
+                "rate": "3663.958251"
+            },
+            {
+                "name": "Unidad de Fomento",
+                "rate": "0.026235"
+            },
+            {
+                "name": "Unidad de Valor Real",
+                "rate": "0"
+            },
+            {
+                "name": "US Dollar",
+                "rate": "1"
+            },
+            {
+                "name": "Uzbekistan Sum",
+                "rate": "10545.535796"
+            },
+            {
+                "name": "Vatu",
+                "rate": "108.610757"
+            },
+            {
+                "name": "WIR Euro",
+                "rate": "0"
+            },
+            {
+                "name": "WIR Franc",
+                "rate": "0"
+            },
+            {
+                "name": "Won",
+                "rate": "1122.55024"
+            },
+            {
+                "name": "Yemeni Rial",
+                "rate": "250.393427"
+            },
+            {
+                "name": "Yen",
+                "rate": "106.629781"
+            },
+            {
+                "name": "Yuan Renminbi",
+                "rate": "6.465199"
+            },
+            {
+                "name": "Zambian Kwacha",
+                "rate": "21.811915"
+            },
+            {
+                "name": "Zimbabwe Dollar",
+                "rate": "322.000331"
+            },
+            {
+                "name": "Zloty",
+                "rate": "3.73835"
+            }
+        ]
+    },
+    "weather": {
+        "January": {
+            "tMin": "24.4501550293",
+            "tMax": "18.00930176",
+            "tAvg": "20.2666666667",
+            "pMin": "5.846851779",
+            "pMax": "88.23769638",
+            "pAvg": "29.8"
+        },
+        "February": {
+            "tMin": "26.2998254395",
+            "tMax": "20.17486938",
+            "tAvg": "22.8666666667",
+            "pMin": "3.84948569506",
+            "pMax": "47.4381990814",
+            "pAvg": "22"
+        },
+        "March": {
+            "tMin": "29.5506518555",
+            "tMax": "22.61679932",
+            "tAvg": "25.9333333333",
+            "pMin": "6.376725397",
+            "pMax": "88.1898341369",
+            "pAvg": "42.1333333333"
+        },
+        "April": {
+            "tMin": "33.40355713",
+            "tMax": "24.9786084",
+            "tAvg": "27.8",
+            "pMin": "21.08829809",
+            "pMax": "165.166368561",
+            "pAvg": "87.1333333333"
+        },
+        "May": {
+            "tMin": "33.69259155",
+            "tMax": "24.80870483",
+            "tAvg": "27.2",
+            "pMin": "100",
+            "pMax": "310.473561401",
+            "pAvg": "188"
+        },
+        "June": {
+            "tMin": "30.00649536",
+            "tMax": "23.94422363",
+            "tAvg": "25.9333333333",
+            "pMin": "100",
+            "pMax": "335.366220703",
+            "pAvg": "250.066666667"
+        },
+        "July": {
+            "tMin": "28.2324438477",
+            "tMax": "23.814823",
+            "tAvg": "25.4",
+            "pMin": "100",
+            "pMax": "348.559702148",
+            "pAvg": "255.533333333"
+        },
+        "August": {
+            "tMin": "27.95759033",
+            "tMax": "24.17374146",
+            "tAvg": "25.1333333333",
+            "pMin": "100",
+            "pMax": "352.304677124",
+            "pAvg": "266.4"
+        },
+        "September": {
+            "tMin": "27.4854748535",
+            "tMax": "23.8030432129",
+            "tAvg": "24.7333333333",
+            "pMin": "100",
+            "pMax": "343.419763794",
+            "pAvg": "244.4"
+        },
+        "October": {
+            "tMin": "25.94481079",
+            "tMax": "22.35729004",
+            "tAvg": "23.6666666667",
+            "pMin": "87.0604855347",
+            "pMax": "197.879922485",
+            "pAvg": "146.866666667"
+        },
+        "November": {
+            "tMin": "24.99392578",
+            "tMax": "20.64130493",
+            "tAvg": "22.2666666667",
+            "pMin": "30.95551906",
+            "pMax": "155.05561",
+            "pAvg": "85.9333333333"
+        },
+        "December": {
+            "tMin": "24.4271826172",
+            "tMax": "18.08267334",
+            "tAvg": "20.2666666667",
+            "pMin": "9.510629835",
+            "pMax": "121.6406296",
+            "pAvg": "50.0666666667"
+        }
+    },
+    "advise": {
+        "UA": {
+            "advise": "Exercise a high degree of caution",
+            "url": "http:\/\/www.smartraveller.gov.au\/zw-cgi\/view\/Advice\/Thailand"
+        },
+        "CA": {
+            "advise": "<!-- START adv-thailand -->Avoid non-essential travel (with regional advisories)<!-- END adv-thailand -->",
+            "url": "http:\/\/travel.gc.ca\/destinations\/thailand"
+        }
+    },
+    "neighbors": [
+        {
+            "id": "38",
+            "name": "Cambodia"
+        },
+        {
+            "id": "243",
+            "name": "Vietnam"
+        },
+        {
+            "id": "120",
+            "name": "Laos"
+        },
+        {
+            "id": "133",
+            "name": "Malaysia"
+        },
+        {
+            "id": "151",
+            "name": "Myanmar"
+        }
+    ]
+}

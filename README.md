@@ -63,8 +63,10 @@ This project will be completed in a 6-week cycle by a group of 4 members.
 
 ## Rabbit holes
 
-* Information such as visa requirements and currency exchange differs based on the country the user is from.
+* Information such as visa requirements and currency exchange differs based on the country the user is from, so we will focus on US.
+* [Travelbriefing.org public API](https://travelbriefing.org/api) does not contains visa requirements information in its json.
 * Since we are only providing information to six Asia countries and some country data can be outdated or incorrect, providing a user feedback form can allow users to inform us of the new country that they would like and the problem(s) they see in the system.
+
 
 ## No goes
 
