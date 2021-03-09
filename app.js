@@ -1,10 +1,42 @@
+/** Require the Http-errors to create http errors for express
+ * {@link https://www.npmjs.com/package/http-errors/}
+    @constant
+    @type {object}
+ */
 var createError = require('http-errors');
+/** Require express framework
+ * {@link https://expressjs.com/}
+    @constant
+    @type {object}
+ */
 var express = require('express');
+/** Require path
+    @constant
+    @type {object}
+ */
 var path = require('path');
+/** Require cookie-parser
+*{@link https://www.npmjs.com/package/cookie-parser/}
+    @constant
+    @type {object}
+ */
 var cookieParser = require('cookie-parser');
+/** Require http request logger middleware morgan
+*{@link https://www.npmjs.com/package/morgan/}
+    @constant
+    @type {object}
+ */
 var logger = require('morgan');
 
+/** Require the index route
+    @constant
+    @type {object}
+ */
 var indexRouter = require('./routes/index');
+/** Require the users route
+    @constant
+    @type {object}
+ */
 var usersRouter = require('./routes/users');
 
 var app = express();
