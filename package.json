@@ -5,7 +5,7 @@
   "scripts": {
     "start": "node ./bin/www",
     "dev-start": "DEBUG=travelbriefing:* npm start",
-    "linter": "npx eslint -c conf.node.eslint.json app.js ./",
+    "linter": "npx eslint -c conf.node.eslint.json ./"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
