@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Home</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Home</h1>
+
+    
+
+
+
+    
+
+
+    <h3> </h3>
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+    <section>
+        <article><h1>Travelbriefing</h1>
+<h2>Team Haiyaaaa</h2>
+<ul>
+<li>Wenwen Xie</li>
+<li>Jianna Huang</li>
+<li>Yun Zhang</li>
+<li>Haoli Yang</li>
+</ul>
+<h2>Problem</h2>
+<p>It is very time-consuming when it comes to researching requirements and important information about a country. When planning to travel to a country, it is important to understand the visa requirements, vaccine requirements, currency exchange prices, do and don’ts, laws/restrictions, cultural differences, etiquettes, etc. Most of the time, travelers have to visit multiple websites to get the information they need because the information is not gathered in one place; thus, travelers need to spend a lot of time researching. The API Travelbriefing provides common information needed for all countries like travel restrictions, exchange rates, visa requirements, etc; However, it does not provide other additional resources like dos and don'ts, cultural differences, special laws, and restrictions, etc.</p>
+<h2>Solution</h2>
+<p>Provide a system that allows users to find all information needed in one place specific to a country. This system will draw travel information from <a href="https://travelbriefing.org/api">Travelbriefing.org public API</a> and obtain culturally related data from <a href="https://culturalatlas.sbs.com.au/">Cultural Atlas</a>. There will be a feedback form to allow users to submit their opinions or anything they would like to correct or see in the system, along with their names and emails. The system will have its own database for tracking the user feedback and storing the data from <a href="https://culturalatlas.sbs.com.au/">Cultural Atlas</a>.</p>
+<ol>
+<li>
+<p>The system will consume the following Travelbriefing.org public API by sending a GET request with the user-selected country:</p>
+<ul>
+<li>GET https://travelbriefing.org/{:country}?format=json</li>
+</ul>
+</li>
+<li>
+<p>We will utilize the data-scraping technique by using node.js and puppeteer to retrieve the information from Cultural Atlas, and the information retrieved will be stored in a local database.</p>
+</li>
+</ol>
+<p>We are not able to do real-time data-scraping and are not sure if Cultural Atlas will have the user’s desired country information available in real-time, plus the concerns on the storage space, we will start off with the six identified Asia countries.</p>
+<p>Users will be able to do the following:</p>
+<ol>
+<li>
+<p>Pick an Asian country:</p>
+<ul>
+<li>China</li>
+<li>Japan</li>
+<li>South Korea</li>
+<li>Malaysia</li>
+<li>Thailand</li>
+<li>Singapore</li>
+</ul>
+</li>
+<li>
+<p>Access basic information about the country</p>
+</li>
+<li>
+<p>Access cultural information about the country</p>
+</li>
+<li>
+<p>Provide user feedback</p>
+</li>
+</ol>
+<h2>Sketch</h2>
+<p>The six countries will list on the main page, along with the country name and its image retrieved from APIs. Each country will display as individual clickable button. The user will always have the ability to visit the main page by clicking on the logo.</p>
+<p><img src="https://user-images.githubusercontent.com/25678885/107431641-583ab280-6aec-11eb-9423-f13d0bb117f4.jpg" alt="Main page"></p>
+<p>After the user click on a country to check out related information, he/she will be directed to the country-specific page where user will find out country’s basic detailed information and cultural information. Information will be categorized and display as menu items of a side menu bar on the left. The content on the right side of the page will change as user choose different categories.</p>
+<p>Since we are presenting many information, the page will split into multiple pages if needed for a well organization, but the design will remain the same.</p>
+<p><img src="https://user-images.githubusercontent.com/25678885/107431645-58d34900-6aec-11eb-8d62-3264cd49ad60.jpg" alt="Country-specific page"></p>
+<p>Users have the ability to submit their opinions or anything that they would like us to know through a feedback form. The form will be always accessible to the user as it is always on the header. The user will need to submit their email and name along with the feedback, in an email-like design.</p>
+<p><img src="https://user-images.githubusercontent.com/25678885/107431646-58d34900-6aec-11eb-9112-f4350dcec7ff.jpg" alt="Feedback page"></p>
+<h2>Appetite</h2>
+<p>This project will be completed in a 6-week cycle by a group of 4 members.</p>
+<h2>Rabbit holes</h2>
+<ul>
+<li>Information such as visa requirements and currency exchange differs based on the country the user is from, so we will focus on US.</li>
+<li><a href="https://travelbriefing.org/api">Travelbriefing.org public API</a> does not contains visa requirements information in its json.</li>
+<li>Since we are only providing information to six Asia countries and some country data can be outdated or incorrect, providing a user feedback form can allow users to inform us of the new country that they would like and the problem(s) they see in the system.</li>
+</ul>
+<h2>No goes</h2>
+<ul>
+<li>Due to time constraint and the excessive amount of database considerations, for our first launch we will only provide information on the identified six Asian countries mentioned above.</li>
+<li>Since there isn’t any feature that requires the user to have an account, it isn’t necessary to create user logins.</li>
+<li>Information from the feedback form will only be stored in the database, no actual emails will be sent out nor an admin view to manage the information.</li>
+</ul></article>
+    </section>
+
+
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#cookieParser">cookieParser</a></li><li><a href="global.html#createError">createError</a></li><li><a href="global.html#express">express</a></li><li><a href="global.html#indexRouter">indexRouter</a></li><li><a href="global.html#logger">logger</a></li><li><a href="global.html#path">path</a></li><li><a href="global.html#usersRouter">usersRouter</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.6</a> on Tue Mar 09 2021 13:28:21 GMT-0600 (Central Standard Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>
