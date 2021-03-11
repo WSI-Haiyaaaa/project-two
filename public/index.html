@@ -21,7 +21,7 @@
     <div class="w3-top">
       <div class="w3-white w3-xlarge" style="max-width:1200px;margin:auto">
         <div class="w3-button w3-padding-16 w3-left" onclick="open_menu()">☰</div>
-        <div class="w3-center w3-padding-16">Travelbriefing</div>
+        <div class="w3-center w3-padding-16"><a href="index.html">Travelbriefing</a></div>
       </div>
     </div>
   </header>
@@ -31,19 +31,19 @@
       <!-- First Photo Grid-->
       <div class="w3-row-padding w3-padding-16 w3-center" id="">
 
-        <div class="w3-col s4">
+        <div class="w3-col s4" id="col">
           <a href="china/">
             <img src="images/china.jpg" alt="China" class="img_wrap">
             <p>China</p>
           </a>
         </div>
-        <div class="w3-col s4">
+        <div class="w3-col s4" id="col">
           <a href="japan/">
             <img src="images/japan.jpg" alt="Japan" class="img_wrap">
             <p>Japan</p>
           </a>
         </div>
-        <div class="w3-col s4">
+        <div class="w3-col s4" id="col">
           <a href="malaysia/">
             <img src="images/malaysia.jpg" alt="Malaysia" class="img_wrap">
             <p>Malaysia</p>
@@ -55,19 +55,19 @@
       <!-- Second Photo Grid-->
       <div class="w3-row-padding w3-padding-16 w3-center" id="">
 
-        <div class="w3-col s4">
+        <div class="w3-col s4" id="col">
           <a href="singapore/">
             <img src="images/singapore.jpg" alt="Singapore" class="img_wrap" >
             <p>Singapore</p>
           </a>
         </div>
-        <div class="w3-col s4">
+        <div class="w3-col s4" id="col">
           <a href="south_korea/">
             <img src="images/south_korea.jpg" alt="South Korea" class="img_wrap">
             <p>South Korea</p>
           </a>
         </div>
-        <div class="w3-col s4">
+        <div class="w3-col s4" id="col">
           <a href="thailand/">
             <img src="images/thailand.jpg" alt="Thailand" class="img_wrap">
             <p>Thailand</p>
@@ -90,16 +90,7 @@
     </nav> -->
 
 
-  <script>
-  // open and close sidebar
-  function open_menu() {
-    document.getElementById("mySidebar").style.display = "block";
-  }
-
-  function close_menu() {
-    document.getElementById("mySidebar").style.display = "none";
-  }
-  </script>
+    <script src="../script.js"></script>
 
 </body>
 </html>

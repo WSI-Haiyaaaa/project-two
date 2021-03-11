@@ -67,3 +67,12 @@ fetch(endpoint)
       document.querySelector('#neighbor_country').appendChild(li);
     }
   })
+
+  // open and close sidebar
+  function open_menu() {
+    document.getElementById("mySidebar").style.display = "block";
+  }
+
+  function close_menu() {
+    document.getElementById("mySidebar").style.display = "none";
+  }
