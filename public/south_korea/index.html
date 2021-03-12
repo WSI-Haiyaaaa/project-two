@@ -5,32 +5,33 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <!-- <link rel="stylesheet" href="../stylesheets/style.css"> -->
+  <link rel="stylesheet" href="../stylesheets/style.css">
+  <link rel="stylesheet" href="../stylesheets/countrypage.css">
 </head>
 <body>
   <header id="header">
     <!-- Sidebar -->
     <nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left" style="display: none;z-index:2;width:40%;min-width:300px" id="mySidebar">
-      <a href="javascript:void(0)" onclick="close_menu()" class="w3-bar-itam w3-button">Close Menu</a>
+      <a href="javascript:void(0)" onclick="close_menu()" class="w3-bar-item w3-button">Close Menu</a>
       <a href="#" onclick="w3_close()" class="w3-bar-item w3-button">Feedback</a>
       <a href="#" onclick="w3_close()" class="w3-bar-item w3-button">About Us</a>
     </nav>
 
     <!-- Top -->
-    <div class="w3-top">
+    <div class="w3-top w3-white">
       <div class="w3-white w3-xlarge" style="max-width:1200px;margin:auto">
         <div class="w3-button w3-padding-16 w3-left" onclick="open_menu()">☰</div>
         <div class="w3-center w3-padding-16"><a href="../index.html">Travelbriefing</a></div>
       </div>
 
-      <div class="w3-panel w3-padding-16 w3-center" id="navigation">
+      <div class="w3-panel w3-padding-16 w3-center w3-white" id="navigation">
         <div class="w3-bar w3-border">
           <a href="../china/" class="w3-bar-item w3-button">China</a>
           <a href="../japan/" class="w3-bar-item w3-button">Japan</a>
           <a href="../malaysia/" class="w3-bar-item w3-button">Malaysia</a>
           <a href="../singapore/" class="w3-bar-item w3-button">Singapore</a>
           <a href="../south_korea/" class="w3-bar-item w3-button w3-light-grey">South Korea</a>
-          <a href="../thailand/" class="w3-bar-item w3-button w3-hide-small">Thailand</a>
+          <a href="../thailand/" class="w3-bar-item w3-button">Thailand</a>
         </div>
       </div>
     </div>
@@ -38,23 +39,23 @@
   </header>
 
   <main id="content">
-    <h1 id="country">South Korea</h1>
+    <h2 id="country">South Korea</h2>
     <p id="fullname"></p>
 
-    <section id="language">
+    <div class="categories" id="language">
       <h2>Language</h2>
       <ul id="lang"></ul>
-    </section>
+    </div>
 
-    <section id="electricity">
+    <div class="categories" id="electricity">
       <h2>Electricity</h2>
       <p id="voltage_and_frequency"></p>
       <p>The associated plug type(s) is the following:</p>
       <ul id="plugs">
       </ul>
-    </section>
+    </div>
 
-    <section id="telephone">
+    <div class="categories" id="telephone">
       <h2>Telephone</h2>
       <ul>
         <li id="calling_code">Calling code:</li>
@@ -62,30 +63,31 @@
         <li id="ambulance">Ambulance:</li>
         <li id="fire">Fire:</li>
       </ul>
-    </section>
+    </div>
 
-    <section id="water">
+    <div class="categories" id="water">
       <h2>Drinking water</h2>
       <p id="water_safety"></p>
-    </section>
+    </div>
 
-    <section id="vax">
+    <div class="categories" id="vax">
       <h2>Vaccinations</h2>
       <ul id="requirements"></ul>
-    </section>
+    </div>
 
-    <section id="currency">
+    <div class="categories" id="currency">
       <h2>Currency</h2>
       <ul>
         <li id="name_and_code"></li>
         <li id="rate"></li>
       </ul>
-    </section>
+    </div>
 
-    <section id="neighbors">
+    <div class="categories" id="neighbors">
       <h2>Neighbors</h2>
       <ul id="neighbor_country"></ul>
-    </section>
+    </div>
+
   </main>
 
   <script src="../script.js"></script>

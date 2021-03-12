@@ -2,5 +2,33 @@
 
 /* For mobile phones: */
 @media only screen and (max-width: 600px) {
+  main {
+    padding-left: 20px;
+  }
+}
 
+main {
+  max-width: 1200px;
+  padding-top: 200px;
+  margin: auto;
+}
+
+h2 {
+	font-size: 26px;
+	font-style: bold;
+}
+
+p {
+	font-size: 18px;
+	padding: 20px;
+}
+
+li {
+  font-size: 18px;
+  padding-left: 20px;
+  padding-top: 20px;
+}
+
+.categories {
+  margin-top: 50px;
 }

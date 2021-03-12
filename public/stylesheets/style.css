@@ -3,13 +3,6 @@
    License: none (public domain)
 */
 
-/* For mobile phones: */
-@media only screen and (max-width: 600px) {
-	#col {
-		width: 100%;
-	}
-}
-
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -54,6 +47,15 @@ table {
 	border-spacing: 0;
 }
 
+
+/* For mobile phones: */
+@media only screen and (max-width: 600px) {
+	#col {
+		width: 100%;
+	}
+
+}
+
 body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
@@ -73,15 +75,11 @@ img {
 	transform: scale(1.1);
 }
 
-p {
-	font-size: 18px;
-	padding: 10px;
-}
 
 a {
 	text-decoration: none;
 }
 
-a:hover {
+.countryname:hover {
 	color: #00B7FF;
 }
