@@ -83,3 +83,37 @@ a {
 .countryname:hover {
 	color: #00B7FF;
 }
+
+/* sidebar style */
+.sidebar {
+	height: 100%;
+	width: 200px;
+	background-color: #fff;
+	position: fixed;
+	z-index: 1;
+	overflow: atuto;
+	font-size: 24px;
+	display: none;
+	z-index: 2;
+	width: 40%;
+	min-width: 300px;
+}
+
+.barmenu {
+	text-align: left;
+	padding: 8px 16px;
+	border: none;
+	white-space: normal;
+	float: left;
+	outline: 0
+	text-align: center;
+	width: 100%;
+	display: block;
+}
+
+.top {
+	position: fixed;
+	width: 100%;
+	z-index: 1;
+	top: 0;
+}
