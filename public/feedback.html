@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Travelbriefing</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./stylesheets/style.css" />
+  </head>
+  <body>
+    <header id="header">
+      <nav id="navigation">
+        <ul>
+          <li><a href="">Home</a></li>
+          <li><a href="china/">China</a></li>
+          <li><a href="japan/">Japan</a></li>
+          <li><a href="malaysia/">Malaysia</a></li>
+          <li><a href="singapore/">Singapore</a></li>
+          <li><a href="south_korea/">South Korea</a></li>
+          <li><a href="thailand/">Thailand</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main id="content">
+      <h2 id="title">Feedback Form</h2>
+      <form id="form">
+        <label for="subject">Subject</label>
+        <input type="text" name="subject" id="subject" required/>
+        <label for="email">Your Email</label>
+        <input type="email" name="email" id="email" required/>
+        <label for="feedback-text">Feedback</label>
+        <textarea
+          name="feedback-text"
+          id="feedback-text"
+          placeholder="Please enter your feedback here"
+          required
+        ></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </main>
+  </body>
+</html>
