@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
+    "test": "mocha",
     "start": "node ./bin/www",
     "dev-start": "DEBUG=travelbriefing:* npm start",
     "linter": "npx eslint -c conf.node.eslint.json ./",
