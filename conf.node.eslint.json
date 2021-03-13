@@ -13,6 +13,7 @@
     "node": true
   },
   "extends": "eslint:recommended",
+  "ignorePatterns": ["/backstop_data/", "/docs/"],
   "rules": {
     "no-console": "off",
     "no-template-curly-in-string": "error",
@@ -25,7 +26,7 @@
     "no-multi-spaces": ["warn", { "ignoreEOLComments": true, "exceptions": { "Property": true } }],
     "no-sequences": "error",
     "require-await": "warn",
-    "vars-on-top": "error",
+    "vars-on-top": "warn",
     "yoda": "error",
     "strict": ["error", "global"],
     "no-undef": "warn",
