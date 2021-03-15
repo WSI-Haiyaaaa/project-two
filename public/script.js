@@ -69,10 +69,14 @@ fetch(endpoint)
   })
 
   // open and close sidebar
+  document.getElementById("mySidebar").onclick = function () {open_menu()};
+  document.getElementById("mySidebar").onclick = function () {close_menu()};
+
   function open_menu() {
     document.getElementById("mySidebar").style.display = "block";
   }
 
   function close_menu() {
     document.getElementById("mySidebar").style.display = "none";
+    console.log("hello");
   }
