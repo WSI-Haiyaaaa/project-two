@@ -4,41 +4,65 @@
   <title>China</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- <link rel="stylesheet" href="../stylesheets/style.css"> -->
+  <link rel="stylesheet" href="../stylesheets/style.css">
 </head>
 <body>
   <header id="header">
-    <nav id="navigation">
-      <ul>
-        <li><a href="../">Home</a></li>
-        <li><a href="../china/">China</a></li>
-        <li><a href="../japan/">Japan</a></li>
-        <li><a href="../malaysia/">Malaysia</a></li>
-        <li><a href="../singapore/">Singapore</a></li>
-        <li><a href="../south_korea/">South Korea</a></li>
-        <li><a href="../thailand/">Thailand</a></li>
-      </ul>
+    <!-- Sidebar -->
+    <nav class="sidebar barmenu topheader" id="mySidebar">
+      <a onclick="close_menu()" class="button">Close Menu</a>
+      <a href="#" class="button">Feedback</a>
+      <a href="#" class="button">About Us</a>
     </nav>
-  </header>
-  <main id="content">
-    <h1 id="country">China</h1>
-    <p id="fullname"></p>
 
-    <section id="language">
-      <h2>Language</h2>
+    <!-- Top -->
+    <section class="fixedtop">
+      <nav class="topheader">
+        <a class="hambutton" onclick="open_menu()">☰</a>
+        <a href="../index.html"><h1 class="logo">Travelbriefing</h1></a>
+      </nav>
+
+      <section class="countrynavi" id="navigation">
+        <nav class="navigation">
+          <a href="../china/" class="countrybutton currentpage">China</a>
+          <a href="../japan/" class="countrybutton">Japan</a>
+          <a href="../malaysia/" class="countrybutton">Malaysia</a>
+          <a href="../singapore/" class="countrybutton">Singapore</a>
+          <a href="../south_korea/" class="countrybutton">South Korea</a>
+          <a href="../thailand/" class="countrybutton">Thailand</a>
+        </nav>
+      </section>
+
+    </section>
+
+  </header>
+
+
+
+  <!-- Country Information Categories-->
+  <main id="content">
+
+    <!-- Name can be hide later -->
+    <section class="">
+      <h2 id="country">China</h2>
+      <p id="fullname"></p>
+    </section>
+
+    <section class="categories" id="language">
+      <h2 class="">Language</h2>
       <ul id="lang"></ul>
     </section>
 
-    <section id="electricity">
-      <h2>Electricity</h2>
+    <section class="categories" id="electricity">
+      <h2 class="">Electricity</h2>
       <p id="voltage_and_frequency"></p>
       <p>The associated plug type(s) is the following:</p>
       <ul id="plugs">
       </ul>
     </section>
 
-    <section id="telephone">
-      <h2>Telephone</h2>
+    <section class="categories" id="telephone">
+      <h2 class="">Telephone</h2>
       <ul>
         <li id="calling_code">Calling code:</li>
         <li id="police">Police:</li>
@@ -47,28 +71,29 @@
       </ul>
     </section>
 
-    <section id="water">
-      <h2>Drinking water</h2>
+    <section class="categories" id="water">
+      <h2 class="">Drinking water</h2>
       <p id="water_safety"></p>
-    </section>
+    </div>
 
-    <section id="vax">
-      <h2>Vaccinations</h2>
+    <section class="categories" id="vax">
+      <h2 class="">Vaccinations</h2>
       <ul id="requirements"></ul>
     </section>
 
-    <section id="currency">
-      <h2>Currency</h2>
+    <section class="categories" id="currency">
+      <h2 class="">Currency</h2>
       <ul>
         <li id="name_and_code"></li>
         <li id="rate"></li>
       </ul>
     </section>
 
-    <section id="neighbors">
-      <h2>Neighbors</h2>
+    <section class="categories" id="neighbors">
+      <h2 class="">Neighbors</h2>
       <ul id="neighbor_country"></ul>
     </section>
+
   </main>
 
   <script src="../script.js"></script>
