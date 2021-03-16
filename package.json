@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
+    "test": "mocha",
     "start": "node ./bin/www",
     "dev-start": "DEBUG=travelbriefing:* npm start",
     "linter": "npx eslint -c conf.node.eslint.json ./",
@@ -16,6 +17,9 @@
     "http-errors": "~1.6.3",
     "jsdoc": "^3.6.6",
     "morgan": "~1.9.1",
-    "pug": "2.0.0-beta11"
+    "pug": "^3.0.2"
+  },
+  "devDependencies": {
+    "mocha": "^8.3.2"
   }
 }
