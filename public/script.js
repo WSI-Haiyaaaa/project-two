@@ -6,7 +6,7 @@ var country = document.querySelector("#country").innerText;
    And replace any white spaces with an underscore */
 var usable_country_name = country.toLowerCase().replace(/\s+/g, "_");
 // Form the endpoint URL
-var endpoint = `/data_samples/${usable_country_name}.json`;
+var endpoint = `/data_samples/${ usable_country_name }.json`;
 
 fetch(endpoint)
   .then(function (response) {
@@ -23,12 +23,12 @@ fetch(endpoint)
       if (country_data.language[i].official === "Yes") {
         li.appendChild(
           document.createTextNode(
-            `${country_data.language[i].language} (Official)`
+            `${ country_data.language[i].language } (Official)`
           )
         );
       } else {
         li.appendChild(
-          document.createTextNode(`${country_data.language[i].language}`)
+          document.createTextNode(`${ country_data.language[i].language }`)
         );
       }
       document.querySelector("#lang").appendChild(li);
@@ -42,37 +42,37 @@ fetch(endpoint)
 */
     document.querySelector(
       "#voltage_and_frequency"
-    ).innerText = `A voltage of ${country_data.electricity.voltage} V and a frequency of ${country_data.electricity.frequency} Hz is used in ${country}.`;
+    ).innerText = `A voltage of ${ country_data.electricity.voltage } V and a frequency of ${ country_data.electricity.frequency } Hz is used in ${ country }.`;
     for (let i = 0; i < country_data.electricity.plugs.length; i++) {
       var li = document.createElement("li");
       li.appendChild(
-        document.createTextNode(`${country_data.electricity.plugs[i]}`)
+        document.createTextNode(`${ country_data.electricity.plugs[i] }`)
       );
       document.querySelector("#plugs").appendChild(li);
     }
 
     document.querySelector(
       "#calling_code"
-    ).innerText += ` ${country_data.telephone.calling_code}`;
+    ).innerText += ` ${ country_data.telephone.calling_code }`;
     document.querySelector(
       "#police"
-    ).innerText += ` ${country_data.telephone.police}`;
+    ).innerText += ` ${ country_data.telephone.police }`;
     document.querySelector(
       "#ambulance"
-    ).innerText += ` ${country_data.telephone.ambulance}`;
+    ).innerText += ` ${ country_data.telephone.ambulance }`;
     document.querySelector(
       "#fire"
-    ).innerText += ` ${country_data.telephone.fire}`;
+    ).innerText += ` ${ country_data.telephone.fire }`;
 
     document.querySelector(
       "#water_safety"
-    ).innerText = `Drinking tap water in ${country} is ${country_data.water.short}.`;
+    ).innerText = `Drinking tap water in ${ country } is ${ country_data.water.short }.`;
 
     for (let i = 0; i < country_data.vaccinations.length; i++) {
       var li = document.createElement("li");
       li.appendChild(
         document.createTextNode(
-          `${country_data.vaccinations[i].name}: ${country_data.vaccinations[i].message}`
+          `${ country_data.vaccinations[i].name }: ${ country_data.vaccinations[i].message }`
         )
       );
       document.querySelector("#requirements").appendChild(li);
@@ -80,15 +80,15 @@ fetch(endpoint)
 
     document.querySelector(
       "#name_and_code"
-    ).innerText = `The currency in ${country} is ${country_data.currency.name} (${country_data.currency.code})`;
+    ).innerText = `The currency in ${ country } is ${ country_data.currency.name } (${ country_data.currency.code })`;
     document.querySelector(
       "#rate"
-    ).innerText = `1 ${country_data.currency.name} = ${country_data.currency.rate} US Dollar`;
+    ).innerText = `1 ${ country_data.currency.name } = ${ country_data.currency.rate } US Dollar`;
 
     for (let i = 0; i < country_data.neighbors.length; i++) {
       var li = document.createElement("li");
       li.appendChild(
-        document.createTextNode(`${country_data.neighbors[i].name}`)
+        document.createTextNode(`${ country_data.neighbors[i].name }`)
       );
       document.querySelector("#neighbor_country").appendChild(li);
     }
@@ -128,9 +128,9 @@ fetch(path)
       if (key === usable_country_name) {
         // Iterate through values of object
         for (let i = 0; i < value.length; i++) {
-          let list = value[i]["list"];
+          let list = value[i].list;
           // Display data based on type of do's or don'ts
-          if (value[i]["type"] === "Do’s") {
+          if (value[i].type === "Do’s") {
             for (let i = 0; i < list.length; i++) {
               appendText(dos_ul, list[i]);
             }
