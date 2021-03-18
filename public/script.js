@@ -132,18 +132,25 @@ fetch(path)
           // Display data based on type of do's or don'ts
           if (value[i]["type"] === "Do’s") {
             for (let i = 0; i < list.length; i++) {
-              let li = document.createElement("li");
-              li.appendChild(document.createTextNode(list[i]));
-              dos_ul.appendChild(li);
+              appendText(dos_ul, list[i]);
             }
           } else {
             for (let i = 0; i < list.length; i++) {
-              let li = document.createElement("li");
-              li.appendChild(document.createTextNode(list[i]));
-              donts_ul.appendChild(li);
+              appendText(donts_ul, list[i]);
             }
           }
         }
       }
     }
   });
+
+/** Append a list of texts to the parent elements (ul).
+  @function
+  @param {object} element An ul parent element
+  @param {string} text Contains the data to be put in the text node
+*/
+function appendText(element, text) {
+  let li = document.createElement("li");
+  li.appendChild(document.createTextNode(text));
+  element.appendChild(li);
+}
