@@ -1,7 +1,9 @@
 {
-  "name": "travelbriefing",
-  "version": "0.0.0",
-  "private": true,
+  "name": "project-two",
+  "version": "0.0.0-prerelease",
+  "description": "Project two is an web app that displays travel related data
+  from travelbriefing API and the Cultural Atlas website of 6 chosen countries.",
+  "main": "app.js",
   "scripts": {
     "test": "mocha",
     "start": "node ./bin/www",
@@ -9,6 +11,21 @@
     "linter": "npx eslint -c conf.node.eslint.json ./",
     "docs": "jsdoc -c conf.jsdoc.json"
   },
+  "directories": {
+    "doc": "docs",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WSI-Haiyaaaa/project-two.git"
+  },
+  "author": "Haiyaaaa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WSI-Haiyaaaa/project-two/issues"
+  },
+  "homepage": "https://github.com/WSI-Haiyaaaa/project-two#readme",
+  "private": true,
   "dependencies": {
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
@@ -21,5 +38,5 @@
   },
   "devDependencies": {
     "mocha": "^8.3.2"
-  }
+  },
 }
