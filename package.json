@@ -1,6 +1,6 @@
 {
   "name": "project-two",
-  "version": "0.1.0",
+  "version": "0.1.0-alpha.1",
   "description": "Project two is an web app that displays travel related data
   from travelbriefing API and the Cultural Atlas website of 6 chosen countries.",
   "main": "app.js",
