@@ -13,8 +13,10 @@ fetch(endpoint)
     return response.json();
   })
   .then(function (country_data) {
+    // Retrieve country full name
     document.querySelector("#fullname").innerText = country_data.names.full;
 
+    // Retrieve country language
     for (let i = 0; i < country_data.language.length; i++) {
       var li = document.createElement("li");
 
@@ -34,12 +36,7 @@ fetch(endpoint)
       document.querySelector("#lang").appendChild(li);
     }
 
-    /*
-    var electricity_p = document.createElement("p");
-    var electricity_text = document.createTextNode(`A voltage of ${country_data.electricity.voltage} V and a frequency of ${country_data.electricity.frequency} Hz is used in ${country}.`);
-    electricity_p.appendChild(electricity_text);
-    document.querySelector('#electricity').appendChild(electricity_p);
-*/
+    // Retrieve electricity info
     document.querySelector(
       "#voltage_and_frequency"
     ).innerText = `A voltage of ${ country_data.electricity.voltage } V and a frequency of ${ country_data.electricity.frequency } Hz is used in ${ country }.`;
@@ -51,6 +48,7 @@ fetch(endpoint)
       document.querySelector("#plugs").appendChild(li);
     }
 
+    // Retrieve emergency telephone info
     document.querySelector(
       "#calling_code"
     ).innerText += ` ${ country_data.telephone.calling_code }`;
@@ -64,6 +62,7 @@ fetch(endpoint)
       "#fire"
     ).innerText += ` ${ country_data.telephone.fire }`;
 
+    // Retrieve drinking water safety info
     document.querySelector(
       "#water_safety"
     ).innerText = `Drinking tap water in ${ country } is ${ country_data.water.short }.`;
@@ -78,6 +77,7 @@ fetch(endpoint)
       document.querySelector("#requirements").appendChild(li);
     }
 
+    // Retrieve currency info
     document.querySelector(
       "#name_and_code"
     ).innerText = `The currency in ${ country } is ${ country_data.currency.name } (${ country_data.currency.code })`;
@@ -85,6 +85,7 @@ fetch(endpoint)
       "#rate"
     ).innerText = `1 ${ country_data.currency.name } = ${ country_data.currency.rate } US Dollar`;
 
+    // Retrieve country neighbors
     for (let i = 0; i < country_data.neighbors.length; i++) {
       var li = document.createElement("li");
       li.appendChild(
@@ -93,23 +94,6 @@ fetch(endpoint)
       document.querySelector("#neighbor_country").appendChild(li);
     }
   });
-
-// open and close sidebar
-document.getElementById("mySidebar").onclick = function () {
-  open_menu();
-};
-document.getElementById("mySidebar").onclick = function () {
-  close_menu();
-};
-
-function open_menu() {
-  document.getElementById("mySidebar").style.display = "block";
-}
-
-function close_menu() {
-  document.getElementById("mySidebar").style.display = "none";
-  console.log("hello");
-}
 
 /* Fetch dos and don'ts data */
 let path = "/data_samples/dos_and_donts.json";
