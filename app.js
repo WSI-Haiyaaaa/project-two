@@ -65,7 +65,7 @@ mongoose.connect('mongodb+srv://jhuang:' + process.env.MONGO_ATLAS_PW +
   useUnifiedTopology: true,
   useNewUrlParser: true,
   useCreateIndex: true
-})
+});
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
