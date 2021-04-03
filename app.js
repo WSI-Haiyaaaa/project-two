@@ -22,12 +22,23 @@ var path = require('path');
     @type {object}
  */
 var cookieParser = require('cookie-parser');
+/** Require body-parser
+    @constant
+    @type {object}
+ */
+var bodyParser = require('body-parser');
 /** Require http request logger middleware morgan
 *{@link https://www.npmjs.com/package/morgan/}
     @constant
     @type {object}
  */
 var logger = require('morgan');
+
+/** Require mongoose
+    @constant
+    @type {object}
+ */
+ var mongoose = require('mongoose');
 
 /** Require the index route
     @constant
@@ -39,9 +50,22 @@ var indexRouter = require('./routes/index');
     @type {object}
  */
 var usersRouter = require('./routes/users');
+/** Require the country route
+    @constant
+    @type {object}
+ */
+var countryRouter = require('./routes/country');
 
 var app = express();
 
+//establish mongosb connection
+mongoose.connect('mongodb+srv://jhuang:' + process.env.MONGO_ATLAS_PW +
+"@cluster0.4hjfq.mongodb.net/myFirstDatabase?retryWrites=true&w=majority" ,
+{
+  useUnifiedTopology: true,
+  useNewUrlParser: true,
+  useCreateIndex: true
+})
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
@@ -52,8 +76,10 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+//routes to handle requests
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/country', countryRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
