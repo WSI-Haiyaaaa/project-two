@@ -5,18 +5,24 @@
   "scripts": {
     "test": "mocha",
     "start": "node ./bin/www",
+    "server": "nodemon server.js",
+    "run_script": "bash ./script/uploadJson.sh",
     "dev-start": "DEBUG=travelbriefing:* npm start",
     "linter": "npx eslint -c conf.node.eslint.json ./",
     "docs": "jsdoc -c conf.jsdoc.json"
   },
   "dependencies": {
+    "body-parser": "^1.18.3",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "eslint": "^7.21.0",
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
     "jsdoc": "^3.6.6",
+    "mongodb": "^3.6.5",
+    "mongoose": "^5.12.3",
     "morgan": "~1.9.1",
+    "nodemon": "^2.0.7",
     "pug": "^3.0.2"
   },
   "devDependencies": {
