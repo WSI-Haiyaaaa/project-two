@@ -1,0 +1,39 @@
+doctype html
+head
+  title Travelbriefing
+  meta(charset='utf-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(rel='stylesheet' href='./stylesheets/style.css')
+header#header
+  ul
+    li
+      a.material-icons(href='../feedback.html') feedback
+    li
+      h1.logo
+        a(href='../index.html') Travelbriefing
+nav#navigation
+  ul
+    li
+      a(href='../china/') China
+    li.currentpage
+      a(href='../japan/') Japan
+    li
+      a(href='../malaysia/') Malaysia
+    li
+      a(href='../singapore/') Singapore
+    li
+      a(href='../south_korea/') South Korea
+    li
+      a(href='../thailand/') Thailand
+main#content
+  h1#title Feedback Form
+  form#form
+    label(for='subject') Subject:
+    input#subject(type='text' name='subject' required='')
+    label(for='email') Your Email:
+    input#email(type='email' name='email' required='')
+    label(for='feedback-text') Feedback:
+    textarea#feedback-text(name='feedback-text' placeholder='Please enter your feedback here' required='')
+    button(type='submit') Submit
+footer
+  p &copy; Copyright 2021 Travelbriefing

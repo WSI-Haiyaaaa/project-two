@@ -1,5 +1,43 @@
-extends layout
-
-block content
-  h1= title
-  p #{greeting} and Welcome to #{title}
+doctype html
+head
+  title Travelbriefing
+  meta(charset='utf-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(rel='stylesheet' href='./stylesheets/style.css')
+  link(href='https://fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet')
+header#header
+  ul.fixedtop
+    li
+      a.material-icons(href='/feedback') feedback
+    li
+      h1.logo
+        a(href='/') Travelbriefing
+// Country Menu
+main.countrymenu.grid
+  // First Photo Grid
+  section.col
+    a.countryname(href='/china')
+      img.img_wrap(src='images/china.jpg' alt='China')
+      h2 China
+  section.col
+    a.countryname(href='/japan')
+      img.img_wrap(src='images/japan.jpg' alt='Japan')
+      h2 Japan
+  section.col
+    a.countryname(href='/malaysia')
+      img.img_wrap(src='images/malaysia.jpg' alt='Malaysia')
+      h2 Malaysia
+  // Second Photo Grid
+  section.col
+    a.countryname(href='/singapore')
+      img.img_wrap(src='images/singapore.jpg' alt='Singapore')
+      h2 Singapore
+  section.col
+    a.countryname(href='/south_korea')
+      img.img_wrap(src='images/south_korea.jpg' alt='South Korea')
+      h2 South Korea
+  section.col
+    a.countryname(href='/thailand')
+      img.img_wrap(src='images/thailand.jpg' alt='Thailand')
+      h2 Thailand
+script(src='../script.js')
