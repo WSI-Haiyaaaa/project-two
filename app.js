@@ -65,7 +65,7 @@ var countryRouter = require("./routes/country");
 
 var app = express();
 
-//establish mongosb connection
+//establish mongodb connection
 mongoose.connect(
   `mongodb+srv://${process.env.MONGO_ATLAS_USER}:${process.env.MONGO_ATLAS_PW}@cluster0.4hjfq.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`,
   {
