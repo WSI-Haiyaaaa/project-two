@@ -12,27 +12,27 @@ router.get("/feedback", function (req, res) {
 });
 /* GET china page. */
 router.get("/china", function (req, res) {
-  res.render("china");
+  res.render("country", { countryName: "China" });
 });
 /* GET japan page. */
 router.get("/japan", function (req, res) {
-  res.render("japan");
+  res.render("country", { countryName: "Japan" });
 });
 /* GET malaysia page. */
 router.get("/malaysia", function (req, res) {
-  res.render("malaysia");
+  res.render("country", { countryName: "Malaysia" });
 });
 /* GET singapore page. */
 router.get("/singapore", function (req, res) {
-  res.render("singapore");
+  res.render("country", { countryName: "Singapore" });
 });
 /* GET south korea page. */
 router.get("/south-korea", function (req, res) {
-  res.render("south_korea");
+  res.render("country", { countryName: "South Korea" });
 });
 /* GET thailand page. */
 router.get("/thailand", function (req, res) {
-  res.render("thailand");
+  res.render("country", { countryName: "Thailand" });
 });
 
 router.get("/index.json", function (req, res) {
