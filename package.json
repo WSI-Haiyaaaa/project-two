@@ -5,7 +5,6 @@
   "scripts": {
     "test": "mocha",
     "start": "node ./bin/www",
-    "server": "nodemon server.js",
     "run_script": "bash ./script/uploadJson.sh",
     "dev-start": "DEBUG=travelbriefing:* npm start",
     "linter": "npx eslint -c conf.node.eslint.json ./",
@@ -15,6 +14,7 @@
     "body-parser": "^1.18.3",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
+    "dotenv": "^8.2.0",
     "eslint": "^7.21.0",
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
