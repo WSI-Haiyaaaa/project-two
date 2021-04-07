@@ -5,20 +5,7 @@ head
   meta(name='viewport' content='width=device-width, initial-scale=1.0')
   link(rel='stylesheet' href='../stylesheets/style.css')
 include components/header.pug
-nav#navigation
-  ul
-    li
-      a(href='../china/') China
-    li
-      a(href='../japan/') Japan
-    li.currentpage
-      a(href='../malaysia/') Malaysia
-    li
-      a(href='../singapore/') Singapore
-    li
-      a(href='../south_korea/') South Korea
-    li
-      a(href='../thailand/') Thailand
+include components/navigation.pug
 main#content
   section
     h1#country Malaysia
