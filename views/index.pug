@@ -5,13 +5,7 @@ head
   meta(name='viewport' content='width=device-width, initial-scale=1.0')
   link(rel='stylesheet' href='./stylesheets/style.css')
   link(href='https://fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet')
-header#header
-  ul.fixedtop
-    li
-      a.material-icons(href='/feedback') feedback
-    li
-      h1.logo
-        a(href='/') Travelbriefing
+include components/header.pug
 // Country Menu
 main.countrymenu.grid
   // First Photo Grid
