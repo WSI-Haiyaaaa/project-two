@@ -1,0 +1,49 @@
+doctype html
+head
+  title China
+  meta(charset='utf-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(rel='stylesheet' href='../stylesheets/style.css')
+include components/header.pug
+include components/navigation.pug
+main#content
+  section
+    h1#country= countryName
+    p#fullname
+  section#language.categories
+    h2 Language
+    ul#lang
+  section#electricity.categories
+    h2 Electricity
+    p#voltage_and_frequency
+    p The associated plug type(s) is the following:
+    ul#plugs
+  section#telephone.categories
+    h2 Telephone
+    ul
+      li#calling_code Calling code:
+      li#police Police:
+      li#ambulance Ambulance:
+      li#fire Fire:
+  section#water.categories
+    h2 Drinking water
+    p#water_safety
+  section#vax.categories
+    h2 Vaccinations
+    ul#requirements
+  section#currency.categories
+    h2 Currency
+    ul
+      li#name_and_code
+      li#rate
+  section#neighbors.categories
+    h2 Neighbors
+    ul#neighbor_country
+  section#dosdonts.categories
+    h2 Do&apos;s and Don&apos;ts
+    h3 Do&apos;s
+    ul#dos
+    h3 Don&apos;ts
+    ul#donts
+include components/footer.pug
+script(src='../script.js')

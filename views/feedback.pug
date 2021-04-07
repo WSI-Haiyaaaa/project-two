@@ -1,0 +1,19 @@
+doctype html
+head
+  title Travelbriefing
+  meta(charset='utf-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(rel='stylesheet' href='./stylesheets/style.css')
+include components/header.pug
+include components/navigation.pug
+main#content
+  h1#title Feedback Form
+  form#form
+    label(for='subject') Subject:
+    input#subject(type='text' name='subject' required='')
+    label(for='email') Your Email:
+    input#email(type='email' name='email' required='')
+    label(for='feedback-text') Feedback:
+    textarea#feedback-text(name='feedback-text' placeholder='Please enter your feedback here' required='')
+    button(type='submit') Submit
+include components/footer.pug
