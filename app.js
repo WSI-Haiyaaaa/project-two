@@ -86,7 +86,6 @@ app.use(express.static(path.join(__dirname, "public")));
 
 //routes to handle requests
 app.use("/", indexRouter);
-app.use("/users", usersRouter);
 app.use("/country", countryRouter);
 
 // catch 404 and forward to error handler
