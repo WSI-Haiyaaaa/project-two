@@ -42,21 +42,22 @@ var mongoose = require("mongoose");
 
 /** Require dotenv
    {@link https://www.npmjs.com/package/dotenv}
-   @constant
    @type {object}
 */
 require("dotenv").config();
+
+/** Require utility functions
+ @constant
+ @type {object}
+*/
+const utils = require("./lib/utils");
 
 /** Require the index route
     @constant
     @type {object}
  */
 var indexRouter = require("./routes/index");
-/** Require the users route
-    @constant
-    @type {object}
- */
-var usersRouter = require("./routes/users");
+
 /** Require the country route
     @constant
     @type {object}
@@ -65,15 +66,9 @@ var countryRouter = require("./routes/country");
 
 var app = express();
 
-//establish mongodb connection
-mongoose.connect(
-  `mongodb+srv://${process.env.MONGO_ATLAS_USER}:${process.env.MONGO_ATLAS_PW}@cluster0.4hjfq.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`,
-  {
-    useUnifiedTopology: true,
-    useNewUrlParser: true,
-    useCreateIndex: true,
-  }
-);
+// Setip DB connection
+utils.connectMongoDB();
+
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "pug");
