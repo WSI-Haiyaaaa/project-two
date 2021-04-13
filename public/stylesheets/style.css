@@ -171,7 +171,7 @@ a {
 
 #navigation li:hover {
 	color: #000;
-	background-color: #ccc;
+	background-color: rgba(204, 204, 204, 0.5);
 }
 
 /* Country Pages' Styles */
@@ -185,9 +185,16 @@ h2 {
 	font-style: bold;
 }
 
+#content h2 {
+	background-color: rgba(204, 204, 204, 0.5);
+	padding: 5px;
+	border-radius: 5px;
+}
+
 h3 {
 	font-size: 22px;
 	line-height: 28px;
+	margin-top: 10px;
 }
 
 .col h2, p {
@@ -208,19 +215,15 @@ ul {
 }
 
 .categories {
-  margin-top: 50px;
+  margin-top: 20px;
 	padding-left: 2%;
 }
 
-#dos {
+#dos, #donts, #plugs {
 	list-style: circle;
 }
 
-#donts {
-	list-style: circle;
-}
-
-#dosdonts ul {
+#dosdonts ul, #plugs {
 	padding-left: 6%;
 }
 
@@ -241,7 +244,7 @@ label {
 
 input {
 	display: block;
-  width: 50%;
+  width: 100%;
 	padding: 2%;
 	border: 1px solid #ccc;
 	margin-bottom: 28px;
@@ -249,7 +252,7 @@ input {
 
 textarea {
 	display: block;
-	width: 50%;
+	width: 100%;
 	padding: 2%;
 	margin-bottom: 28px;
 	border: 1px solid #ccc;
