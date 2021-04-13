@@ -121,7 +121,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
-//routes to handle requests
+// routes to handle requests
 app.use("/", indexRouter);
 app.use("/china", chinaRouter);
 app.use("/japan", japanRouter);

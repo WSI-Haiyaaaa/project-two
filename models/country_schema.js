@@ -8,7 +8,7 @@ const countrySchema = mongoose.Schema({
   water: Object,
   vaccinations: Array,
   currency: Object,
-  neighbors: Array,
+  neighbors: Array
 });
 
 module.exports = mongoose.model("country", countrySchema);

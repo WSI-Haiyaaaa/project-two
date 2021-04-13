@@ -6,11 +6,6 @@
  */
 var express = require("express");
 var router = express.Router();
-/** Require mongoose framework
-    @constant
-    @type {object}
- */
-const mongoose = require('mongoose');
 /** Require Country scheme
     @constant
     @type {object}
@@ -22,21 +17,21 @@ router.get("/", function (req, res) {
   Country.find({"names.name": "Japan"})
     .select('-__v')
     .exec()
-    .then(record => { // Check if the record id exists
-       if(!record) { // If not, set status 404 Not Found
-           res.status(404).json({
-               error: "Country not found"
-           });
-       } else { // If exists, set status 200 OK and render the page with the object
-         res.status(200).render("country", { country: record });
+    .then((record) => { // Check if the record id exists
+      if(!record) { // If not, set status 404 Not Found
+        res.status(404).json({
+          error: "Country not found"
+        });
+      } else { // If exists, set status 200 OK and render the page with the object
+        res.status(200).render("country", { country: record });
       }
     })
-    .catch(err => { // Set status of 500 Internal Server Error if an error is catch
-       console.log(err);
-       res.status(500).json({
-           error: err
-       });
-    })
+    .catch((err) => { // Set status of 500 Internal Server Error if an error is catch
+      console.log(err);
+      res.status(500).json({
+        error: err
+      });
+    });
 });
 
 module.exports = router;

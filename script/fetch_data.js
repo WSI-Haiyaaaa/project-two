@@ -9,7 +9,7 @@ const originalFetch = require("node-fetch");
  */
 const fetch = require("fetch-retry")(originalFetch, {
   retries: 5,
-  retryDelay: 2000,
+  retryDelay: 2000
 });
 /** Require MongoDB model
     @constant
@@ -40,12 +40,12 @@ let array = [
   "Singapore",
   "Thailand",
   "Malaysia",
-  "South_Korea",
+  "South_Korea"
 ];
 
 /** Fetch data of six countries */
 for (let i = 0; i < array.length; i++) {
-  let apiURL = `https://travelbriefing.org/${array[i]}?format=json`;
+  let apiURL = `https://travelbriefing.org/${ array[i] }?format=json`;
   setTimeout(function () {
     fetchData(apiURL, array[i]);
   }, 6000 * i);
@@ -58,7 +58,7 @@ for (let i = 0; i < array.length; i++) {
  */
 function fetchData(url, currentCountry) {
   fetch(url)
-    .then((res) => res.json())
+    .then(res => res.json())
     .then((data) => {
       let storage = {
         names: data.names,
@@ -68,7 +68,7 @@ function fetchData(url, currentCountry) {
         water: data.water,
         vaccinatoins: data.vaccinations,
         currency: data.currency,
-        neighbors: data.neighbors,
+        neighbors: data.neighbors
       };
       updateCountryData(storage, currentCountry);
     })
@@ -87,7 +87,7 @@ function updateCountryData(document, currentCountry) {
     if (err) {
       return console.error(err);
     } else {
-      console.log(`${currentCountry} data updated to MongoDB!`);
+      console.log(`${ currentCountry } data updated to MongoDB!`);
     }
   });
 }
