@@ -30,6 +30,9 @@ require("dotenv").config({ path: "../.env" });
 // Setip DB connection
 utils.connectMongoDB();
 
+// Delete all country data
+deleteCollection(CountryModel);
+
 // List of country's name
 let array = [
   "Japan",
@@ -87,4 +90,13 @@ function updateCountryData(document, currentCountry) {
       console.log(`${currentCountry} data updated to MongoDB!`);
     }
   });
+}
+
+/** Update and save country data to DB
+    @function
+    @param {Object} model - A monogoDB model object
+ */
+function deleteCollection(model) {
+  model.collection.drop();
+  console.log("collection dropped");
 }
