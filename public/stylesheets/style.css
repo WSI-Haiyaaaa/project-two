@@ -169,10 +169,6 @@ a {
 	outline:0;
 }
 
-.currentpage {
-	background-color: #f1f1f1;
-}
-
 #navigation li:hover {
 	color: #000;
 	background-color: #ccc;
