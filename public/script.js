@@ -5,25 +5,6 @@ var country = document.querySelector("#country").innerText;
 /* Change the name to lower case
    And replace any white spaces with an underscore */
 var usable_country_name = country.toLowerCase().replace(/\s+/g, "_");
-// Form the endpoint URL
-var endpoint = `/data_samples/${ usable_country_name }.json`;
-
-fetch(endpoint)
-  .then(function (response) {
-    return response.json();
-  })
-  .then(function (country_data) {
-    // Retrieve vaccine requirements
-    for (let i = 0; i < country_data.vaccinations.length; i++) {
-      var li = document.createElement("li");
-      li.appendChild(
-        document.createTextNode(
-          `${ country_data.vaccinations[i].name }: ${ country_data.vaccinations[i].message }`
-        )
-      );
-      document.querySelector("#requirements").appendChild(li);
-    }
-  });
 
 /* Fetch dos and don'ts data */
 let path = "/data_samples/dos_and_donts.json";

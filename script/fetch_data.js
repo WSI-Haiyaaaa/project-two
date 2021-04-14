@@ -66,7 +66,7 @@ function fetchData(url, currentCountry) {
         electricity: data.electricity,
         telephone: data.telephone,
         water: data.water,
-        vaccinatoins: data.vaccinations,
+        vaccinations: data.vaccinations,
         currency: data.currency,
         neighbors: data.neighbors
       };

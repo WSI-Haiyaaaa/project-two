@@ -1,6 +1,6 @@
 doctype html
 head
-  title China
+  title Travelbriefing | #{country[0].names.name}
   meta(charset='utf-8')
   meta(name='viewport' content='width=device-width, initial-scale=1.0')
   link(rel='stylesheet' href='../stylesheets/style.css')
@@ -33,13 +33,16 @@ main#content
       li Ambulance: #{country[0].telephone.ambulance}
       li Fire: #{country[0].telephone.fire}
   section#water.categories
-    h2 Drinking water
+    h2 Drinking Water
     p Drinking tap water in #{country[0].names.name} is #{country[0].water.short}.
   section#vax.categories
     h2 Vaccinations
     ul#requirements
-      for vaccine in country[0].vaccinations
-        li #{vaccine.name}: #{vaccine.message}
+      if country[0].vaccinations.length == 0
+        li Currently unavailable
+      else
+        for vaccine in country[0].vaccinations
+          li #{vaccine.name}: #{vaccine.message}
   section#currency.categories
     h2 Currency
     ul
