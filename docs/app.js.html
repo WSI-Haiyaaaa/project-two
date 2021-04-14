@@ -26,76 +26,154 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>/** Require the Http-errors to create http errors for express
+            <pre class="prettyprint source linenums"><code>"use strict";
+/** Require the Http-errors to create http errors for express
  * {@link https://www.npmjs.com/package/http-errors/}
     @constant
     @type {object}
  */
-var createError = require('http-errors');
+var createError = require("http-errors");
 /** Require express framework
  * {@link https://expressjs.com/}
     @constant
     @type {object}
  */
-var express = require('express');
+var express = require("express");
 /** Require path
     @constant
     @type {object}
  */
-var path = require('path');
+var path = require("path");
 /** Require cookie-parser
 *{@link https://www.npmjs.com/package/cookie-parser/}
     @constant
     @type {object}
  */
-var cookieParser = require('cookie-parser');
+var cookieParser = require("cookie-parser");
+/** Require body-parser
+    @constant
+    @type {object}
+ */
+var bodyParser = require("body-parser");
 /** Require http request logger middleware morgan
 *{@link https://www.npmjs.com/package/morgan/}
     @constant
     @type {object}
  */
-var logger = require('morgan');
+var logger = require("morgan");
+
+/** Require mongoose
+    @constant
+    @type {object}
+ */
+var mongoose = require("mongoose");
+
+/** Require dotenv
+   {@link https://www.npmjs.com/package/dotenv}
+   @type {object}
+*/
+require("dotenv").config();
+
+/** Require utility functions
+ @constant
+ @type {object}
+*/
+const utils = require("./lib/utils");
 
 /** Require the index route
     @constant
     @type {object}
  */
-var indexRouter = require('./routes/index');
-/** Require the users route
+var indexRouter = require("./routes/index");
+
+/** Require the china route
     @constant
     @type {object}
  */
-var usersRouter = require('./routes/users');
+var chinaRouter = require("./routes/china");
+
+/** Require the japan route
+    @constant
+    @type {object}
+ */
+var japanRouter = require("./routes/japan");
+
+/** Require the malaysia route
+    @constant
+    @type {object}
+ */
+var malaysiaRouter = require("./routes/malaysia");
+
+/** Require the singapore route
+    @constant
+    @type {object}
+ */
+var singaporeRouter = require("./routes/singapore");
+
+/** Require the south korea route
+    @constant
+    @type {object}
+ */
+var southKoreaRouter = require("./routes/south-korea");
+
+/** Require the thailand route
+    @constant
+    @type {object}
+ */
+var thailandRouter = require("./routes/thailand");
+
+/** Require the feedback route
+    @constant
+    @type {object}
+ */
+var feedbackRouter = require("./routes/feedback");
+
+/** Require the country route
+    @constant
+    @type {object}
+ */
+var countryRouter = require("./routes/country");
 
 var app = express();
 
-// view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'pug');
+// Setip DB connection
+utils.connectMongoDB();
 
-app.use(logger('dev'));
+// view engine setup
+app.set("views", path.join(__dirname, "views"));
+app.set("view engine", "pug");
+
+app.use(logger("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, "public")));
 
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
+// routes to handle requests
+app.use("/", indexRouter);
+app.use("/china", chinaRouter);
+app.use("/japan", japanRouter);
+app.use("/malaysia", malaysiaRouter);
+app.use("/singapore", singaporeRouter);
+app.use("/south-korea", southKoreaRouter);
+app.use("/thailand", thailandRouter);
+app.use("/feedback", feedbackRouter);
+app.use("/country", countryRouter);
 
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
+app.use(function (req, res, next) {
   next(createError(404));
 });
 
 // error handler
-app.use(function(err, req, res, next) {
+app.use(function (err, req, res) {
   // set locals, only providing error in development
   res.locals.message = err.message;
-  res.locals.error = req.app.get('env') === 'development' ? err : {};
+  res.locals.error = req.app.get("env") === "development" ? err : {};
 
   // render the error page
   res.status(err.status || 500);
-  res.render('error');
+  res.render("error");
 });
 
 module.exports = app;
@@ -109,13 +187,13 @@ module.exports = app;
 </div>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#cookieParser">cookieParser</a></li><li><a href="global.html#createError">createError</a></li><li><a href="global.html#express">express</a></li><li><a href="global.html#indexRouter">indexRouter</a></li><li><a href="global.html#logger">logger</a></li><li><a href="global.html#path">path</a></li><li><a href="global.html#usersRouter">usersRouter</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#bodyParser">bodyParser</a></li><li><a href="global.html#chinaRouter">chinaRouter</a></li><li><a href="global.html#cookieParser">cookieParser</a></li><li><a href="global.html#countryRouter">countryRouter</a></li><li><a href="global.html#createError">createError</a></li><li><a href="global.html#express">express</a></li><li><a href="global.html#feedbackRouter">feedbackRouter</a></li><li><a href="global.html#indexRouter">indexRouter</a></li><li><a href="global.html#japanRouter">japanRouter</a></li><li><a href="global.html#logger">logger</a></li><li><a href="global.html#malaysiaRouter">malaysiaRouter</a></li><li><a href="global.html#mongoose">mongoose</a></li><li><a href="global.html#path">path</a></li><li><a href="global.html#singaporeRouter">singaporeRouter</a></li><li><a href="global.html#southKoreaRouter">southKoreaRouter</a></li><li><a href="global.html#thailandRouter">thailandRouter</a></li><li><a href="global.html#utils">utils</a></li></ul>
 </nav>
 
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.6</a> on Tue Mar 09 2021 13:28:21 GMT-0600 (Central Standard Time)
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.6</a> on Tue Apr 13 2021 18:32:20 GMT-0500 (Central Daylight Time)
 </footer>
 
 <script> prettyPrint(); </script>

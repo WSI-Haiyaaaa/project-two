@@ -7,9 +7,9 @@
 var express = require("express");
 var router = express.Router();
 
-/* GET home page. */
+/* GET feedback page. */
 router.get("/", function (req, res) {
-  res.render("index");
+  res.render("feedback");
 });
 
 module.exports = router;

@@ -58,6 +58,48 @@ const utils = require("./lib/utils");
  */
 var indexRouter = require("./routes/index");
 
+/** Require the china route
+    @constant
+    @type {object}
+ */
+var chinaRouter = require("./routes/china");
+
+/** Require the japan route
+    @constant
+    @type {object}
+ */
+var japanRouter = require("./routes/japan");
+
+/** Require the malaysia route
+    @constant
+    @type {object}
+ */
+var malaysiaRouter = require("./routes/malaysia");
+
+/** Require the singapore route
+    @constant
+    @type {object}
+ */
+var singaporeRouter = require("./routes/singapore");
+
+/** Require the south korea route
+    @constant
+    @type {object}
+ */
+var southKoreaRouter = require("./routes/south-korea");
+
+/** Require the thailand route
+    @constant
+    @type {object}
+ */
+var thailandRouter = require("./routes/thailand");
+
+/** Require the feedback route
+    @constant
+    @type {object}
+ */
+var feedbackRouter = require("./routes/feedback");
+
 /** Require the country route
     @constant
     @type {object}
@@ -79,8 +121,15 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
-//routes to handle requests
+// routes to handle requests
 app.use("/", indexRouter);
+app.use("/china", chinaRouter);
+app.use("/japan", japanRouter);
+app.use("/malaysia", malaysiaRouter);
+app.use("/singapore", singaporeRouter);
+app.use("/south-korea", southKoreaRouter);
+app.use("/thailand", thailandRouter);
+app.use("/feedback", feedbackRouter);
 app.use("/country", countryRouter);
 
 // catch 404 and forward to error handler
