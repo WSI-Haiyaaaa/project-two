@@ -57,7 +57,10 @@ main#content
     h2 Do&apos;s and Don&apos;ts
     h3 Do&apos;s
     ul#dos
+      each dos in culture[0].Dos
+        li #{dos}
     h3 Don&apos;ts
     ul#donts
+      for dont in culture[0].Donts
+        li #{dont}
 include components/footer.pug
-script(src='../script.js')
