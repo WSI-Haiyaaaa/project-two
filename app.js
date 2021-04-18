@@ -94,12 +94,6 @@ const thailandRouter = require("./routes/thailand");
  */
 const feedbackRouter = require("./routes/feedback");
 
-/** Require the country route
-    @constant
-    @type {object}
- */
-const countryRouter = require("./routes/country");
-
 const app = express();
 
 // Setip DB connection
@@ -124,7 +118,6 @@ app.use("/singapore", singaporeRouter);
 app.use("/south-korea", southKoreaRouter);
 app.use("/thailand", thailandRouter);
 app.use("/feedback", feedbackRouter);
-app.use("/country", countryRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
