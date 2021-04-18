@@ -25,20 +25,20 @@ const Culture = require("../models/dos_and_donts_schema");
 /* GET china page. */
 router.get("/", async function (req, res) {
   const countryRecord = await utils.getRecordFromDB(Country, {
-    "names.name": "China",
+    "names.name": "China"
   });
   const cultureRecord = await utils.getRecordFromDB(Culture, {
-    countryName: "china",
+    countryName: "china"
   });
   if (!countryRecord) {
     // If not, set status 404 Not Found
     res.status(404).json({
-      error: "Country not found",
+      error: "Country not found"
     });
   } else if (!cultureRecord) {
     // If not, set status 404 Not Found
     res.status(404).json({
-      error: "Culture not found",
+      error: "Culture not found"
     });
   }
   // If exists, set status 200 OK and render the page with the object

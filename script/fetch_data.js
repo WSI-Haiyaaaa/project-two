@@ -1,3 +1,4 @@
+'use strict';
 /** Require node-fetch package beacause fetch API is not implemented in Node
     @constant
     @type {object}

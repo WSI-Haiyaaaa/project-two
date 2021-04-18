@@ -4,41 +4,35 @@
     @constant
     @type {object}
  */
-var createError = require("http-errors");
+const createError = require("http-errors");
 /** Require express framework
  * {@link https://expressjs.com/}
     @constant
     @type {object}
  */
-var express = require("express");
+const express = require("express");
 /** Require path
     @constant
     @type {object}
  */
-var path = require("path");
+const path = require("path");
 /** Require cookie-parser
 *{@link https://www.npmjs.com/package/cookie-parser/}
     @constant
     @type {object}
  */
-var cookieParser = require("cookie-parser");
+const cookieParser = require("cookie-parser");
 /** Require body-parser
     @constant
     @type {object}
  */
-var bodyParser = require("body-parser");
+const bodyParser = require("body-parser");
 /** Require http request logger middleware morgan
 *{@link https://www.npmjs.com/package/morgan/}
     @constant
     @type {object}
  */
-var logger = require("morgan");
-
-/** Require mongoose
-    @constant
-    @type {object}
- */
-var mongoose = require("mongoose");
+const logger = require("morgan");
 
 /** Require dotenv
    {@link https://www.npmjs.com/package/dotenv}
@@ -56,57 +50,57 @@ const utils = require("./lib/utils");
     @constant
     @type {object}
  */
-var indexRouter = require("./routes/index");
+const indexRouter = require("./routes/index");
 
 /** Require the china route
     @constant
     @type {object}
  */
-var chinaRouter = require("./routes/china");
+const chinaRouter = require("./routes/china");
 
 /** Require the japan route
     @constant
     @type {object}
  */
-var japanRouter = require("./routes/japan");
+const japanRouter = require("./routes/japan");
 
 /** Require the malaysia route
     @constant
     @type {object}
  */
-var malaysiaRouter = require("./routes/malaysia");
+const malaysiaRouter = require("./routes/malaysia");
 
 /** Require the singapore route
     @constant
     @type {object}
  */
-var singaporeRouter = require("./routes/singapore");
+const singaporeRouter = require("./routes/singapore");
 
 /** Require the south korea route
     @constant
     @type {object}
  */
-var southKoreaRouter = require("./routes/south-korea");
+const southKoreaRouter = require("./routes/south-korea");
 
 /** Require the thailand route
     @constant
     @type {object}
  */
-var thailandRouter = require("./routes/thailand");
+const thailandRouter = require("./routes/thailand");
 
 /** Require the feedback route
     @constant
     @type {object}
  */
-var feedbackRouter = require("./routes/feedback");
+const feedbackRouter = require("./routes/feedback");
 
 /** Require the country route
     @constant
     @type {object}
  */
-var countryRouter = require("./routes/country");
+const countryRouter = require("./routes/country");
 
-var app = express();
+const app = express();
 
 // Setip DB connection
 utils.connectMongoDB();
