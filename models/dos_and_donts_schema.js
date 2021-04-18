@@ -1,9 +1,10 @@
+'use strict';
 const mongoose = require("mongoose");
 
 const dosAndDontsSchema = mongoose.Schema({
   countryName: String,
-  "Do's": Array,
-  "Don'ts": Array
+  Dos: Array,
+  Donts: Array
 });
 
 module.exports = mongoose.model("dos_and_donts", dosAndDontsSchema);
