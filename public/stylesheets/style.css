@@ -244,7 +244,7 @@ label {
 
 input {
 	display: block;
-  width: 100%;
+  width: 96%;
 	padding: 2%;
 	border: 1px solid #ccc;
 	margin-bottom: 28px;
@@ -252,7 +252,7 @@ input {
 
 textarea {
 	display: block;
-	width: 100%;
+	width: 96%;
 	padding: 2%;
 	margin-bottom: 28px;
 	border: 1px solid #ccc;
