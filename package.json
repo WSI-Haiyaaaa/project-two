@@ -5,7 +5,6 @@
   "scripts": {
     "test": "mocha",
     "start": "node ./bin/www",
-    "run_script": "bash ./script/uploadJson.sh",
     "dev-start": "DEBUG=travelbriefing:* npm start",
     "linter": "npx eslint -c conf.node.eslint.json ./",
     "docs": "jsdoc -c conf.jsdoc.json"
