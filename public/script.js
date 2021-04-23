@@ -1,5 +1,8 @@
 "use strict";
 /* global document, fetch */
+
+const su = require('../lib/scraper');
+
 // Get the country name from the html page
 var country = document.querySelector("#country").innerText;
 /* Change the name to lower case
@@ -7,6 +10,7 @@ var country = document.querySelector("#country").innerText;
 var usable_country_name = country.toLowerCase().replace(/\s+/g, "_");
 // Form the endpoint URL
 var endpoint = `/data_samples/${ usable_country_name }.json`;
+
 
 fetch(endpoint)
   .then(function (response) {
