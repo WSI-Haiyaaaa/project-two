@@ -31,7 +31,7 @@ require("dotenv").config({ path: "../.env" });
 var date = new Date();
 var today = date.getDate();
 var runScriptDay = 1;
-
+/** Check to see if today is the same as runScriptDay */
 if (today == runScriptDay) {
   // Setip DB connection
   utils.connectMongoDB();
