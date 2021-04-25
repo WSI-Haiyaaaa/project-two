@@ -4,10 +4,11 @@
   "private": true,
   "scripts": {
     "test": "mocha",
-    "start": "node ./bin/www",
+    "start": "npm run data & node ./bin/www",
     "dev-start": "DEBUG=travelbriefing:* npm start",
     "linter": "npx eslint -c conf.node.eslint.json ./",
-    "docs": "jsdoc -c conf.jsdoc.json"
+    "docs": "jsdoc -c conf.jsdoc.json",
+    "data": "cd ./script && node fetch_data.js"
   },
   "dependencies": {
     "body-parser": "^1.18.3",
