@@ -4,90 +4,121 @@
     @constant
     @type {object}
  */
-var createError = require("http-errors");
+const createError = require("http-errors");
 /** Require express framework
  * {@link https://expressjs.com/}
     @constant
     @type {object}
  */
-var express = require("express");
+const express = require("express");
 /** Require path
     @constant
     @type {object}
  */
-var path = require("path");
+const path = require("path");
 /** Require cookie-parser
 *{@link https://www.npmjs.com/package/cookie-parser/}
     @constant
     @type {object}
  */
-var cookieParser = require("cookie-parser");
+const cookieParser = require("cookie-parser");
 /** Require body-parser
     @constant
     @type {object}
  */
-var bodyParser = require("body-parser");
+const bodyParser = require("body-parser");
 /** Require http request logger middleware morgan
 *{@link https://www.npmjs.com/package/morgan/}
     @constant
     @type {object}
  */
-var logger = require("morgan");
-
-/** Require mongoose
-    @constant
-    @type {object}
- */
-var mongoose = require("mongoose");
+const logger = require("morgan");
 
 /** Require dotenv
    {@link https://www.npmjs.com/package/dotenv}
-   @constant
    @type {object}
 */
 require("dotenv").config();
+
+/** Require utility functions
+ @constant
+ @type {object}
+*/
+const utils = require("./lib/utils");
 
 /** Require the index route
     @constant
     @type {object}
  */
-var indexRouter = require("./routes/index");
-/** Require the users route
+const indexRouter = require("./routes/index");
+
+/** Require the china route
     @constant
     @type {object}
  */
-var usersRouter = require("./routes/users");
-/** Require the country route
+const chinaRouter = require("./routes/china");
+
+/** Require the japan route
     @constant
     @type {object}
  */
-var countryRouter = require("./routes/country");
+const japanRouter = require("./routes/japan");
 
-var app = express();
+/** Require the malaysia route
+    @constant
+    @type {object}
+ */
+const malaysiaRouter = require("./routes/malaysia");
 
-//establish mongodb connection
-mongoose.connect(
-  `mongodb+srv://${process.env.MONGO_ATLAS_USER}:${process.env.MONGO_ATLAS_PW}@cluster0.4hjfq.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`,
-  {
-    useUnifiedTopology: true,
-    useNewUrlParser: true,
-    useCreateIndex: true,
-  }
-);
+/** Require the singapore route
+    @constant
+    @type {object}
+ */
+const singaporeRouter = require("./routes/singapore");
+
+/** Require the south korea route
+    @constant
+    @type {object}
+ */
+const southKoreaRouter = require("./routes/south-korea");
+
+/** Require the thailand route
+    @constant
+    @type {object}
+ */
+const thailandRouter = require("./routes/thailand");
+
+/** Require the feedback route
+    @constant
+    @type {object}
+ */
+const feedbackRouter = require("./routes/feedback");
+
+const app = express();
+
+// Setip DB connection
+utils.connectMongoDB();
+
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "pug");
 
 app.use(logger("dev"));
 app.use(express.json());
+app.use(bodyParser.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
-//routes to handle requests
+// routes to handle requests
 app.use("/", indexRouter);
-app.use("/users", usersRouter);
-app.use("/country", countryRouter);
+app.use("/china", chinaRouter);
+app.use("/japan", japanRouter);
+app.use("/malaysia", malaysiaRouter);
+app.use("/singapore", singaporeRouter);
+app.use("/south-korea", southKoreaRouter);
+app.use("/thailand", thailandRouter);
+app.use("/feedback", feedbackRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

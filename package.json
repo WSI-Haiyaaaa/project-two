@@ -5,7 +5,6 @@
   "scripts": {
     "test": "mocha",
     "start": "node ./bin/www",
-    "run_script": "bash ./script/uploadJson.sh",
     "dev-start": "DEBUG=travelbriefing:* npm start",
     "linter": "npx eslint -c conf.node.eslint.json ./",
     "docs": "jsdoc -c conf.jsdoc.json"
@@ -17,11 +16,13 @@
     "dotenv": "^8.2.0",
     "eslint": "^7.21.0",
     "express": "~4.16.1",
+    "fetch-retry": "^4.1.1",
     "http-errors": "~1.6.3",
     "jsdoc": "^3.6.6",
     "mongodb": "^3.6.5",
     "mongoose": "^5.12.3",
     "morgan": "~1.9.1",
+    "node-fetch": "^2.6.1",
     "nodemon": "^2.0.7",
     "pug": "^3.0.2"
   },

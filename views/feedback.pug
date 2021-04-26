@@ -1,13 +1,15 @@
 doctype html
 head
-  title Travelbriefing
+  title Travelbriefing | Feedback
   meta(charset='utf-8')
   meta(name='viewport' content='width=device-width, initial-scale=1.0')
   link(rel='stylesheet' href='./stylesheets/style.css')
+  script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js")
+  script(type='text/javascript' src='script/post_feedback.js')
 include components/header.pug
 include components/navigation.pug
 main#content
-  h1#title Feedback Form
+  h1#title Feedback
   form#form
     label(for='subject') Subject:
     input#subject(type='text' name='subject' required='')
@@ -15,5 +17,5 @@ main#content
     input#email(type='email' name='email' required='')
     label(for='feedback-text') Feedback:
     textarea#feedback-text(name='feedback-text' placeholder='Please enter your feedback here' required='')
-    button(type='submit') Submit
+    button#submitFeedback(type='submit') Submit
 include components/footer.pug

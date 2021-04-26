@@ -1,6 +1,6 @@
 doctype html
 head
-  title China
+  title Travelbriefing | #{country[0].names.name}
   meta(charset='utf-8')
   meta(name='viewport' content='width=device-width, initial-scale=1.0')
   link(rel='stylesheet' href='../stylesheets/style.css')
@@ -8,42 +8,59 @@ include components/header.pug
 include components/navigation.pug
 main#content
   section
-    h1#country= countryName
-    p#fullname
+    h1#country #{country[0].names.name}
+    p #{country[0].names.full}
   section#language.categories
     h2 Language
     ul#lang
+      for language in country[0].language
+        if language.official == "Yes"
+          li #{language.language} (Offical)
+        else
+          li #{language.language}
   section#electricity.categories
     h2 Electricity
-    p#voltage_and_frequency
+    p A voltage of #{country[0].electricity.voltage} V and a frequency of #{country[0].electricity.frequency } Hz is used in #{country[0].names.name}.
     p The associated plug type(s) is the following:
     ul#plugs
+      for plug in country[0].electricity.plugs
+        li #{plug}
   section#telephone.categories
     h2 Telephone
     ul
-      li#calling_code Calling code:
-      li#police Police:
-      li#ambulance Ambulance:
-      li#fire Fire:
+      li Calling code: #{country[0].telephone.calling_code}
+      li Police: #{country[0].telephone.police}
+      li Ambulance: #{country[0].telephone.ambulance}
+      li Fire: #{country[0].telephone.fire}
   section#water.categories
-    h2 Drinking water
-    p#water_safety
+    h2 Drinking Water
+    p Drinking tap water in #{country[0].names.name} is #{country[0].water.short}.
   section#vax.categories
     h2 Vaccinations
     ul#requirements
+      if country[0].vaccinations.length == 0
+        li Currently unavailable
+      else
+        for vaccine in country[0].vaccinations
+          li #{vaccine.name}: #{vaccine.message}
   section#currency.categories
     h2 Currency
     ul
-      li#name_and_code
-      li#rate
+      li The currency used in #{country[0].names.name} is #{country[0].currency.name} (#{country[0].currency.code}).
+      li 1 #{country[0].currency.name } = #{country[0].currency.rate } US Dollar.
   section#neighbors.categories
-    h2 Neighbors
-    ul#neighbor_country
+    h2 Neighbor Country(s)
+    ul
+      for neighbor in country[0].neighbors
+        li #{neighbor.name}
   section#dosdonts.categories
     h2 Do&apos;s and Don&apos;ts
     h3 Do&apos;s
     ul#dos
+      each dos in culture[0].Dos
+        li #{dos}
     h3 Don&apos;ts
     ul#donts
+      for dont in culture[0].Donts
+        li #{dont}
 include components/footer.pug
-script(src='../script.js')
