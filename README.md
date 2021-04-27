@@ -1,5 +1,7 @@
 # Travelbriefing
 
+Heroku App: https://vast-plains-82531.herokuapp.com/
+
 ## Team Haiyaaaa
 
 * Wenwen Xie
