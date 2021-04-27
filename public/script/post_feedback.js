@@ -14,7 +14,7 @@ function submitFeedbackForm(){
   let feedback = $('#feedback-text').val();
 
 /** ajax post request for feedback */
-  $.ajax("http://localhost:3000/feedback",{
+  $.ajax("https://vast-plains-82531.herokuapp.com/feedback/",{
     type : "POST",
     data : {
       subject : subject,
@@ -23,11 +23,11 @@ function submitFeedbackForm(){
     },
     success : result => {
       console.log("success ", result);
-      alert("Your feedback is successfully submitted. Thank you for your feedback")
+      alert("Your feedback is successfully submitted. Thank you for your feedback");
     },
     error : error => {
       console.log("error", error);
-      alert("Failed to submit feedback. Please try again.")
+      alert("Failed to submit feedback. Please try again.");
     }
   });
 }
