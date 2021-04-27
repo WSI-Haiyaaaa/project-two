@@ -44,7 +44,7 @@ router.post("/", function (req, res){
       },
       request: {
       type: "GET",
-      url: "http://localhost:3000/feedback/" + result._id
+      url: "https://vast-plains-82531.herokuapp.com/feedback/" + result._id
     }
    });
   })
