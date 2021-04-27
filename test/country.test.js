@@ -18,21 +18,17 @@ utils.connectMongoDB();
     @param {string} currentCountry - Country's name
  */
 
-   // let storage = {
-   //   names: data.names
-   // };
-
-function fetchData(url) {
-  fetch(url)
+async function fetchData(url) {
+  return fetch(url)
     .then(res => res.json())
     .then((data) => {
-      return data.names
+      return data.names.name;
+      // console.log(data.names);
     })
     .catch((status, err) => {
       console.log(status, err);
     });
 }
-
 
 describe('country_data', function() {
   // List of country's name
@@ -41,15 +37,28 @@ describe('country_data', function() {
   // ];
 
   /** Fetch data */
-  let url = `https://travelbriefing.org/${'Japan'}?format=json`;
+  let url = `https://travelbriefing.org/Japan?format=json`;
 
-  console.log(data.names);
+  describe('#getName', () => {
+  it('returns name', async () => {
+    const result = await fetchData(url);
+    assert.equal(result, 'Japan');
+  });
+});
 
-  beforeEach(function() {
-  });
-  describe('country_name', function() {
-    it('should return the expected country name', function() {
-      assert.equal(fetchData(url), 'Japan');
-    });
-  });
+// describe('#getName', () => {
+//   it('resolves with name', () => {
+//     return fetchData(url).then(res => {
+//       assert.equal(res, 'Japan')
+//     });
+//   });
+// });
+
+  // beforeEach(function() {
+  // });
+  // describe('country_name', function() {
+  //   it('should return the expected country name', function() {
+  //     assert.equal(result, 'Japan');
+  //   });
+  // });
 });
