@@ -36,8 +36,7 @@ async function fetchName(url) {
     return fetch(url)
       .then(res => res.json())
       .then((data) => {
-        return data.language;
-        // console.log(data.names);
+        return data.language[0].language;
       })
       .catch((status, err) => {
         console.log(status, err);
@@ -116,29 +115,24 @@ async function fetchNeighbors(url) {
       });
 }
 
-  describe('china_data', function(done) {
+  describe('malaysia_data', function(done) {
 
     this.timeout(10000);
 
     /** Fetch data */
-      let url = `https://travelbriefing.org/China?format=json`;
+      let url = `https://travelbriefing.org/Malaysia?format=json`;
 
     describe('#getName', () => {
     it('returns name', async () => {
       const result = await fetchName(url);
-      assert.equal(result, "China");
+      assert.equal(result, "Malaysia");
     });
     });
 
     describe('#getLanguage', () => {
     it('returns language', async () => {
       const result = await fetchLanguage(url);
-      assert.equal(result[0].language, 'Chinese');
-      assert.equal(result[1].language, 'Cantonese');
-      assert.equal(result[2].language, 'Shanghaiese');
-      assert.equal(result[3].language, 'Minnan');
-      assert.equal(result[4].language, 'Xiang');
-      assert.equal(result[5].language, 'Gan');
+      assert.equal(result, 'Malay');
     });
     });
 
@@ -146,27 +140,25 @@ async function fetchNeighbors(url) {
     it('returns electricity', async () => {
       const result = await fetchElectricity(url);
       assert.equal(result.frequency,'50');
-      assert.equal(result.plugs[0],'A');
-      assert.equal(result.plugs[1],'C');
-      assert.equal(result.plugs[2],'I');
-      assert.equal(result.voltage,'220');
+      assert.equal(result.plugs[0],'G');
+      assert.equal(result.voltage,'240');
     });
     });
 
     describe('#getTelephone', () => {
     it('returns telephone', async () => {
       const result = await fetchTelephone(url);
-      assert.equal(result.ambulance, '120');
-      assert.equal(result.calling_code, '86');
-      assert.equal(result.fire, '119');
-      assert.equal(result.police, '110');
+      assert.equal(result.ambulance, '112');
+      assert.equal(result.calling_code, '60');
+      assert.equal(result.fire, '112');
+      assert.equal(result.police, '112');
     });
     });
 
     describe('#getWater', () => {
     it('returns water', async () => {
       const result = await fetchWater(url);
-      assert.equal(result, 'not safe');
+      assert.equal(result, null);
     });
     });
 
@@ -180,20 +172,20 @@ async function fetchNeighbors(url) {
     describe('#getCurrency', () => {
     it('returns currency', async () => {
       const result = await fetchCurrency(url);
-      assert.equal(result.name, 'Yuan Renminbi');
-      assert.equal(result.code, 'CNY');
+      assert.equal(result.name, 'Malaysian Ringgit');
+      assert.equal(result.code, 'MYR');
     });
     });
 
     describe('#getNeighbors', () => {
     it('returns neighbors', async () => {
       const result = await fetchNeighbors(url);
-      assert.equal(result[0].name, 'Mongolia');
-      assert.equal(result[1].name, 'Laos');
-      assert.equal(result[2].name, 'Russia');
-      assert.equal(result[3].name, 'Vietnam');
-      assert.equal(result[4].name, 'Bhutan');
+      assert.equal(result[0].name, 'Singapore');
+      assert.equal(result[1].name, 'Thailand');
+      assert.equal(result[2].name, 'Cambodia');
+      assert.equal(result[3].name, 'Brunei');
+      assert.equal(result[4].name, 'Vietnam');
     });
     });
-    
+
   });
