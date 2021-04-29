@@ -170,12 +170,16 @@ async function fetchNeighbors(url) {
     });
     });
 
-    // describe('#getVaccinations', () => {
-    // it('returns vaccinations', async () => {
-    //   const result = await fetchVaccinations(url);
-    //   assert.equal(result.length, 0);
-    // });
-    // });
+    describe('#getVaccinations', () => {
+    it('returns vaccinations', async () => {
+      const result = await fetchVaccinations(url);
+      assert.equal(result[0].name, 'Malaria');
+      assert.equal(result[1].name, 'Hepatitis A');
+      assert.equal(result[2].name, 'Hepatitis B');
+      assert.equal(result[3].name, 'Tyfoid');
+      assert.equal(result[4].name, 'DTP');
+    });
+    });
 
     describe('#getCurrency', () => {
     it('returns currency', async () => {
@@ -195,5 +199,5 @@ async function fetchNeighbors(url) {
       assert.equal(result[4].name, 'Bhutan');
     });
     });
-    
+
   });
