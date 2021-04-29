@@ -5,11 +5,11 @@ const assert = require("assert").strict;
     @constant
     @type {object}
  */
-const mongoose = require('mongoose');
+
 const fetch = require("node-fetch");
 
 const utils = require('../lib/utils');
-utils.connectMongoDB();
+// utils.connectMongoDB();
 // const data = require('../script/fetch_data');
 
 /** Fetch data from the api
