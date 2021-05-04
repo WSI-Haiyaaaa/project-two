@@ -32,41 +32,35 @@
     @constant
     @type {object}
  */
-var createError = require("http-errors");
+const createError = require("http-errors");
 /** Require express framework
  * {@link https://expressjs.com/}
     @constant
     @type {object}
  */
-var express = require("express");
+const express = require("express");
 /** Require path
     @constant
     @type {object}
  */
-var path = require("path");
+const path = require("path");
 /** Require cookie-parser
 *{@link https://www.npmjs.com/package/cookie-parser/}
     @constant
     @type {object}
  */
-var cookieParser = require("cookie-parser");
+const cookieParser = require("cookie-parser");
 /** Require body-parser
     @constant
     @type {object}
  */
-var bodyParser = require("body-parser");
+const bodyParser = require("body-parser");
 /** Require http request logger middleware morgan
 *{@link https://www.npmjs.com/package/morgan/}
     @constant
     @type {object}
  */
-var logger = require("morgan");
-
-/** Require mongoose
-    @constant
-    @type {object}
- */
-var mongoose = require("mongoose");
+const logger = require("morgan");
 
 /** Require dotenv
    {@link https://www.npmjs.com/package/dotenv}
@@ -84,57 +78,51 @@ const utils = require("./lib/utils");
     @constant
     @type {object}
  */
-var indexRouter = require("./routes/index");
+const indexRouter = require("./routes/index");
 
 /** Require the china route
     @constant
     @type {object}
  */
-var chinaRouter = require("./routes/china");
+const chinaRouter = require("./routes/china");
 
 /** Require the japan route
     @constant
     @type {object}
  */
-var japanRouter = require("./routes/japan");
+const japanRouter = require("./routes/japan");
 
 /** Require the malaysia route
     @constant
     @type {object}
  */
-var malaysiaRouter = require("./routes/malaysia");
+const malaysiaRouter = require("./routes/malaysia");
 
 /** Require the singapore route
     @constant
     @type {object}
  */
-var singaporeRouter = require("./routes/singapore");
+const singaporeRouter = require("./routes/singapore");
 
 /** Require the south korea route
     @constant
     @type {object}
  */
-var southKoreaRouter = require("./routes/south-korea");
+const southKoreaRouter = require("./routes/south-korea");
 
 /** Require the thailand route
     @constant
     @type {object}
  */
-var thailandRouter = require("./routes/thailand");
+const thailandRouter = require("./routes/thailand");
 
 /** Require the feedback route
     @constant
     @type {object}
  */
-var feedbackRouter = require("./routes/feedback");
+const feedbackRouter = require("./routes/feedback");
 
-/** Require the country route
-    @constant
-    @type {object}
- */
-var countryRouter = require("./routes/country");
-
-var app = express();
+const app = express();
 
 // Setip DB connection
 utils.connectMongoDB();
@@ -145,6 +133,7 @@ app.set("view engine", "pug");
 
 app.use(logger("dev"));
 app.use(express.json());
+app.use(bodyParser.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
@@ -158,7 +147,6 @@ app.use("/singapore", singaporeRouter);
 app.use("/south-korea", southKoreaRouter);
 app.use("/thailand", thailandRouter);
 app.use("/feedback", feedbackRouter);
-app.use("/country", countryRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
@@ -187,13 +175,13 @@ module.exports = app;
 </div>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#bodyParser">bodyParser</a></li><li><a href="global.html#chinaRouter">chinaRouter</a></li><li><a href="global.html#cookieParser">cookieParser</a></li><li><a href="global.html#countryRouter">countryRouter</a></li><li><a href="global.html#createError">createError</a></li><li><a href="global.html#express">express</a></li><li><a href="global.html#feedbackRouter">feedbackRouter</a></li><li><a href="global.html#indexRouter">indexRouter</a></li><li><a href="global.html#japanRouter">japanRouter</a></li><li><a href="global.html#logger">logger</a></li><li><a href="global.html#malaysiaRouter">malaysiaRouter</a></li><li><a href="global.html#mongoose">mongoose</a></li><li><a href="global.html#path">path</a></li><li><a href="global.html#singaporeRouter">singaporeRouter</a></li><li><a href="global.html#southKoreaRouter">southKoreaRouter</a></li><li><a href="global.html#thailandRouter">thailandRouter</a></li><li><a href="global.html#utils">utils</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#bodyParser">bodyParser</a></li><li><a href="global.html#chinaRouter">chinaRouter</a></li><li><a href="global.html#cookieParser">cookieParser</a></li><li><a href="global.html#createError">createError</a></li><li><a href="global.html#express">express</a></li><li><a href="global.html#feedbackRouter">feedbackRouter</a></li><li><a href="global.html#indexRouter">indexRouter</a></li><li><a href="global.html#japanRouter">japanRouter</a></li><li><a href="global.html#logger">logger</a></li><li><a href="global.html#malaysiaRouter">malaysiaRouter</a></li><li><a href="global.html#path">path</a></li><li><a href="global.html#singaporeRouter">singaporeRouter</a></li><li><a href="global.html#southKoreaRouter">southKoreaRouter</a></li><li><a href="global.html#thailandRouter">thailandRouter</a></li><li><a href="global.html#utils">utils</a></li></ul>
 </nav>
 
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.6</a> on Tue Apr 13 2021 18:32:20 GMT-0500 (Central Daylight Time)
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.6</a> on Mon May 03 2021 19:47:57 GMT-0500 (Central Daylight Time)
 </footer>
 
 <script> prettyPrint(); </script>
