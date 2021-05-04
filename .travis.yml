@@ -1,22 +1,17 @@
 language: node_js
 node_js:
-  - 12
+- 12
 branches:
   only:
-    - main
+  - main
 services:
-  - mongodb
+- mongodb
 install: npm install --save-dev
 script:
-  - npm run test
-  - npm run linter
+- npm run test
+- npm run linter
 after_success:
-  - eval "$(ssh-agent -s)"
-  - chmod 600 .travis/id_rsa
-  - ssh-add .travis/id_rsa
-  - echo -e "Host *\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
-  - cd ~
-  - git clone git@github.com:WSI-Haiyaaaa/project-two.git project-two
-  - cd project-two
-  - git remote add live $DEPLOY_URL
-  - git push live main
+  deploy:
+    provider: heroku
+    api_key:
+      secure: dsgETWzmlCeYuKdmRCAUAR/jFHz/THhazcDSClHfwna1T7wh5ceOcokbBgYKUOJlUmdRBVMlFQOYTqvp5JTkEcoMm67JUg6y1sWM0UaREyWObceun9Lh7LIcok4jvASFcw0PlFTOWwZX3ewb/qBI5+rmPWF8WXsWzyjHDye2Fib1GGuVidoLxR50mGLB4DNeW1OxujmNwwC5RV1jJy1wRI2YdSnkqSOvh/Z83dWhou+lDTn6jlrAz47yrSejly9M6m7buRXQZ7l93mnf0UG+aO67pnXY9G2wKOZM9woD0XvqsFhDdi1TjftXz8wO80/NlHT80CE2CHOcG5jCVSl2zI0Xfo8h84OrWIxOGdrHcwwD8aH9WnJsS5OilZEK3juaP+bU9cJ90PiWlf3ImlnPaRKfTuyv00IoD8pUSF8UGc+F2x+Jl6s8eLJRT1n8FlNl3S2MYgX8V6FhoxsCb3po//jdS+CTD0+f49zYXnsPbQcZf7HX4aNcWynE3oIXAqzVDLQtFL5QOVsBdU7+M8wyKVenHg9fefrdCNEe+q07w0EpifcWNWiNbic/DzSGETizh+uidrpkKf7CXuGGt2+fGNWb0do26I7SwXv6k+EJRxA7U3GXpp5sApkdJjSqaeCC6i9MqLL+wVp4Jbe8/1FHe9kcRhEaIbyHA8RB1aBBSlA=
