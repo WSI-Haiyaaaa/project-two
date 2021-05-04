@@ -3,8 +3,8 @@
   "viewports": [
     {
       "label": "phone",
-      "width": 320,
-      "height": 480
+      "width": 375,
+      "height": 903
     },
     {
       "label": "tablet",
@@ -16,9 +16,47 @@
   "onReadyScript": "puppet/onReady.js",
   "scenarios": [
     {
-      "label": "BackstopJS Homepage",
+      "label": "Travelbriefing Homepage",
       "cookiePath": "backstop_data/engine_scripts/cookies.json",
-      "url": "https://localhost:8443/",
+      "url": "https://localhost:3000/",
+      "referenceUrl": "",
+      "readyEvent": "",
+      "readySelector": "",
+      "delay": 0,
+      "hideSelectors": [],
+      "removeSelectors": [],
+      "hoverSelector": "",
+      "clickSelector": "",
+      "postInteractionWait": 0,
+      "selectors": [],
+      "selectorExpansion": true,
+      "expect": 0,
+      "misMatchThreshold" : 0.1,
+      "requireSameDimensions": true
+    },
+    {
+      "label": "Travelbriefing Country Page",
+      "cookiePath": "backstop_data/engine_scripts/cookies.json",
+      "url": "https://localhost:3000/china",
+      "referenceUrl": "",
+      "readyEvent": "",
+      "readySelector": "",
+      "delay": 0,
+      "hideSelectors": [],
+      "removeSelectors": [],
+      "hoverSelector": "",
+      "clickSelector": "",
+      "postInteractionWait": 0,
+      "selectors": [],
+      "selectorExpansion": true,
+      "expect": 0,
+      "misMatchThreshold" : 0.1,
+      "requireSameDimensions": true
+    },
+    {
+      "label": "Travelbriefing Feedback Page",
+      "cookiePath": "backstop_data/engine_scripts/cookies.json",
+      "url": "https://localhost:3000/feedback",
       "referenceUrl": "",
       "readyEvent": "",
       "readySelector": "",
