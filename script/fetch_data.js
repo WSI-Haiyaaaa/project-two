@@ -28,9 +28,9 @@ const utils = require("../lib/utils");
 */
 require("dotenv").config({ path: "../.env" });
 
-var date = new Date();
-var today = date.getDate();
-var runScriptDay = 1;
+let date = new Date();
+let today = date.getDate();
+let runScriptDay = 4;
 /** Check to see if today is the same as runScriptDay */
 if (today === runScriptDay) {
   // Setip DB connection

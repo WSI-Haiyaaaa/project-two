@@ -1,5 +1,7 @@
 # Travelbriefing
 
+[![Build Status](https://travis-ci.com/WSI-Haiyaaaa/project-two.svg?branch=main)](https://travis-ci.com/WSI-Haiyaaaa/project-two)
+
 Heroku App: https://vast-plains-82531.herokuapp.com/
 
 ## Team Haiyaaaa
