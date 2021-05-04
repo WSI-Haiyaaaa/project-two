@@ -1,0 +1,11 @@
+language: node_js
+node_js:
+  - 12
+
+services:
+  - mongodb
+install: npm install --save-dev
+
+script:
+  - npm run test
+  - npm run linter
