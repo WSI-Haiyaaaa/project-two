@@ -16,7 +16,7 @@ const fetch = require("node-fetch");
 
 // Fetch country name
 async function fetchName(url) {
-  return fetch(url)
+  return await fetch(url)
     .then(res => res.json())
     .then(data =>
       data.names.name
@@ -29,7 +29,7 @@ async function fetchName(url) {
 
 // Fetch Language
 async function fetchLanguage(url) {
-  return fetch(url)
+  return await fetch(url)
     .then(res => res.json())
     .then(data => data.language[0].language)
     .catch((status, err) => {
@@ -39,7 +39,7 @@ async function fetchLanguage(url) {
 
 // Fetch electricity
 async function fetchElectricity(url) {
-  return fetch(url)
+  return await fetch(url)
     .then(res => res.json())
     .then(data => data.electricity)
     .catch((status, err) => {
@@ -49,7 +49,7 @@ async function fetchElectricity(url) {
 
 // Fetch telephone
 async function fetchTelephone(url) {
-  return fetch(url)
+  return await fetch(url)
     .then(res => res.json())
     .then(data => data.telephone)
     .catch((status, err) => {
@@ -59,7 +59,7 @@ async function fetchTelephone(url) {
 
 // Fetch water
 async function fetchWater(url) {
-  return fetch(url)
+  return await fetch(url)
     .then(res => res.json())
     .then(data => data.water.short)
     .catch((status, err) => {
@@ -69,7 +69,7 @@ async function fetchWater(url) {
 
 // Fetch vaccinations
 async function fetchVaccinations(url) {
-  return fetch(url)
+  return await fetch(url)
     .then(res => res.json())
     .then(data => data.vaccinations)
     .catch((status, err) => {
@@ -79,7 +79,7 @@ async function fetchVaccinations(url) {
 
 // Fetch currency
 async function fetchCurrency(url) {
-  return fetch(url)
+  return await fetch(url)
     .then(res => res.json())
     .then(data => data.currency)
     .catch((status, err) => {
@@ -89,7 +89,7 @@ async function fetchCurrency(url) {
 
 // Fetch neighbors
 async function fetchNeighbors(url) {
-  return fetch(url)
+  return await fetch(url)
     .then(res => res.json())
     .then(data => data.neighbors)
     .catch((status, err) => {
