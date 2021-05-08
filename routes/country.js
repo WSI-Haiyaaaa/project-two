@@ -27,7 +27,7 @@ const Culture = require("../models/dos_and_donts_schema");
 router.get("/:country", async function (req, res) {
   const countryName = req.params.country;
   const countryRecord = await utils.getRecordFromDB(Country, {
-    "names.name": "China",
+    "names.name": utils.capitalizeName(countryName),
   });
   const cultureRecord = await utils.getRecordFromDB(Culture, {
     countryName: countryName,
