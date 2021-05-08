@@ -23,8 +23,9 @@ const Country = require("../models/country_schema");
  */
 const Culture = require("../models/dos_and_donts_schema");
 
-/* GET china page. */
+/* GET country page. */
 router.get("/:country", async function (req, res) {
+  // Get country name from the request parameter
   const countryName = req.params.country;
   const countryRecord = await utils.getRecordFromDB(Country, {
     "names.name": utils.capitalizeName(countryName),
