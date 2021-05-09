@@ -1,6 +1,6 @@
-// "use strict";
-// /* global describe, it */
-// const assert = require("assert").strict;
+"use strict";
+/* global describe, it */
+const assert = require("assert").strict;
 // /** Require mongoose package
 //     @constant
 //     @type {object}
