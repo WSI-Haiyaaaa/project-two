@@ -1,7 +1,6 @@
 "use strict";
 /* global describe, it */
 const assert = require("assert").strict;
-const mongoose = require("mongoose");
 
 const request = require('supertest');
 const app = require('../app');
@@ -20,7 +19,6 @@ describe('API requests on app', function() {
     return request(app)
       .get('/')
       .expect(200)
-      done();
   });
 });
 
