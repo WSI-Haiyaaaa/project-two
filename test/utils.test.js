@@ -29,12 +29,12 @@ describe('Test getRecordFromDB()', function() {
       mongoose.connection.close();
   });
 
-  it('should return a country nane from DB', async() => {
+  it('should return related data of the requested country', async() => {
     const result = await getRecordFromDB(countrySchema);
     assert.equal(result[0].names.name, 'Japan');
   });
 
-  it('should return expected language from DB', async() => {
+  it('should return related data of the requested language', async() => {
   const result = await getRecordFromDB(countrySchema);
   assert.equal(result[0].language[0].language, 'Japanese');
   });
