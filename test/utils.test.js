@@ -6,9 +6,9 @@ const request = require('supertest');
 const app = require('../app');
 const { connectMongoDB, getRecordFromDB, capitalizeName } = require('../lib/utils');
 const countrySchema = require('../models/country_schema');
+const mongoose = require("mongoose");
 
 describe('API requests on app', function() {
-  this.timeout(10000);
 
   before(async function() {
     // set up database
@@ -23,18 +23,27 @@ describe('API requests on app', function() {
 });
 
 //Test getRecordFromDB()
-describe('Test getRecordFromDB()', function(done) {
-  this.timeout(50000);
+describe('Test getRecordFromDB()', function() {
+
+  after(function() {
+      mongoose.connection.close();
+  });
+
   it('should return a country nane from DB', async() => {
     const result = await getRecordFromDB(countrySchema);
     assert.equal(result[0].names.name, 'Japan');
+  });
+
+  it('should return expected language from DB', async() => {
+  const result = await getRecordFromDB(countrySchema);
+  assert.equal(result[0].language[0].language, 'Japanese');
   });
 
 });
 
 //Test capitalizeName()
 describe('Test capitalizeName()', function(done) {
-  this.timeout(10000);
+
   it('should return a capitalized the first letter of country name (test one with underscore) ', function(){
     const result = capitalizeName("south_korea");
     assert.equal(result, 'South Korea');
