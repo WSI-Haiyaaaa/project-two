@@ -31,13 +31,13 @@ describe('Test getRecordFromDB()', function() {
   });
 
   it('should return related data of the requested country', async() => {
-    const result = await getRecordFromDB(countrySchema);
-    assert.equal(result[0].names.name, 'Japan');
+    const result = await getRecordFromDB(countrySchema, { "names.name": "China" });
+    assert.equal(result[0].names.name, 'China');
   });
 
   it('should return related data of the requested language', async() => {
-  const result = await getRecordFromDB(countrySchema);
-  assert.equal(result[0].language[0].language, 'Japanese');
+  const result = await getRecordFromDB(countrySchema, { "language.language": "Chinese" });
+  assert.equal(result[0].language[0].language, 'Chinese');
   });
 
 });
