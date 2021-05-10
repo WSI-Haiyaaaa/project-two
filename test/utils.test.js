@@ -19,6 +19,7 @@ describe('API requests on app', function() {
     return request(app)
       .get('/')
       .expect(200)
+      done();
   });
 });
 
