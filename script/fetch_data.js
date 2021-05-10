@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 /** Require node-fetch package beacause fetch API is not implemented in Node
     @constant
     @type {object}
@@ -53,7 +53,9 @@ if (today === runScriptDay) {
   for (let i = 0; i < array.length; i++) {
     let apiURL = `https://travelbriefing.org/${ array[i] }?format=json`;
     setTimeout(function () {
-      fetchData(apiURL, array[i]);
+      fetchData(apiURL).then((result) => {
+        updateCountryData(result, array[i]);
+      });
     }, 6000 * i);
   }
 }
@@ -61,31 +63,9 @@ if (today === runScriptDay) {
 /** Fetch data from the api
     @function
     @param {string} url - API endpoint
-    @param {string} currentCountry - Country's name
+    @returns {Promise} - A Promise object represents the fetched data
  */
-// function fetchData(url, currentCountry) {
-//   fetch(url)
-//     .then(res => res.json())
-//     .then((data) => {
-//       let storage = {
-//         names: data.names,
-//         language: data.language,
-//         electricity: data.electricity,
-//         telephone: data.telephone,
-//         water: data.water,
-//         vaccinations: data.vaccinations,
-//         currency: data.currency,
-//         neighbors: data.neighbors
-//       };
-//       updateCountryData(storage, currentCountry);
-//     })
-//     .catch((status, err) => {
-//       console.log(status, err);
-//     });
-//     return fetchData.storage;
-// }
-
-function fetchData(url, currentCountry) {
+function fetchData(url) {
   return fetch(url)
     .then(res => res.json())
     .then((data) => {
@@ -100,7 +80,6 @@ function fetchData(url, currentCountry) {
         "neighbors": data.neighbors
       };
       return storage;
-      // updateCountryData(storage, currentCountry);
     })
     .catch((status, err) => {
       console.log(status, err);

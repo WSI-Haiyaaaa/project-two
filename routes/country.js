@@ -1,11 +1,6 @@
 "use strict";
-/** Require express framework
- * {@link https://expressjs.com/}
-    @constant
-    @type {object}
- */
-var express = require("express");
-var router = express.Router();
+const express = require("express");
+const router = express.Router();
 /** Require utility functions
     @constant
     @type {object}
@@ -14,21 +9,23 @@ const utils = require("../lib/utils");
 /** Require Country scheme
     @constant
     @type {object}
-  */  
+ */
 const Country = require("../models/country_schema");
 /** Require Culture scheme
     @constant
     @type {object}
-  */
+ */
 const Culture = require("../models/dos_and_donts_schema");
 
-/* GET singapore page. */
-router.get("/", async function (req, res) {
+/* GET country page. */
+router.get("/:country", async function (req, res) {
+  // Get country name from the request parameter
+  const countryName = req.params.country;
   const countryRecord = await utils.getRecordFromDB(Country, {
-    "names.name": "Singapore"
+    "names.name": utils.capitalizeName(countryName)
   });
   const cultureRecord = await utils.getRecordFromDB(Culture, {
-    countryName: "singapore"
+    countryName: countryName
   });
   if (!countryRecord) {
     // If not, set status 404 Not Found
@@ -46,5 +43,4 @@ router.get("/", async function (req, res) {
     .status(200)
     .render("country", { country: countryRecord, culture: cultureRecord });
 });
-
 module.exports = router;

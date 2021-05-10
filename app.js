@@ -52,41 +52,11 @@ const utils = require("./lib/utils");
  */
 const indexRouter = require("./routes/index");
 
-/** Require the china route
+/** Require the country route
     @constant
     @type {object}
  */
-const chinaRouter = require("./routes/china");
-
-/** Require the japan route
-    @constant
-    @type {object}
- */
-const japanRouter = require("./routes/japan");
-
-/** Require the malaysia route
-    @constant
-    @type {object}
- */
-const malaysiaRouter = require("./routes/malaysia");
-
-/** Require the singapore route
-    @constant
-    @type {object}
- */
-const singaporeRouter = require("./routes/singapore");
-
-/** Require the south korea route
-    @constant
-    @type {object}
- */
-const southKoreaRouter = require("./routes/south-korea");
-
-/** Require the thailand route
-    @constant
-    @type {object}
- */
-const thailandRouter = require("./routes/thailand");
+const countryRouter = require("./routes/country");
 
 /** Require the feedback route
     @constant
@@ -112,12 +82,7 @@ app.use(express.static(path.join(__dirname, "public")));
 
 // routes to handle requests
 app.use("/", indexRouter);
-app.use("/china", chinaRouter);
-app.use("/japan", japanRouter);
-app.use("/malaysia", malaysiaRouter);
-app.use("/singapore", singaporeRouter);
-app.use("/south-korea", southKoreaRouter);
-app.use("/thailand", thailandRouter);
+app.use("/", countryRouter);
 app.use("/feedback", feedbackRouter);
 
 // catch 404 and forward to error handler
