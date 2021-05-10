@@ -1,6 +1,7 @@
 "use strict";
 /* global describe, it */
 const assert = require("assert").strict;
+const mongoose = require("mongoose");
 
 const request = require('supertest');
 const app = require('../app');
@@ -23,6 +24,19 @@ describe('API requests on app', function() {
   });
 });
 
+//Test getRecordFromDB()
+describe('Test getRecordFromDB()', function() {
+  it('should return a country nane from DB', async() => {
+    const result = await getRecordFromDB(countrySchema);
+    assert.equal(result[0].names.name, 'Japan');
+  });
+
+  it('should return expected languages from DB', async() => {
+    const result = await getRecordFromDB(countrySchema);
+    assert.equal(6,result.length, 'expected 6 languages');
+  });
+
+});
 
 //Test capitalizeName()
 describe('Test capitalizeName()', function() {

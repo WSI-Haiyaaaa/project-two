@@ -6,7 +6,7 @@ const { fetchData } = require('../script/fetch_data');
 
 let url = `https://travelbriefing.org/China?format=json`;
 
-describe('test_china_data', function() {
+describe('test_country_data', function() {
   this.timeout(10000);
 
   describe('fetchData()', () => {
