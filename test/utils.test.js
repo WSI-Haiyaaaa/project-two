@@ -24,6 +24,7 @@ describe('API requests on app', function() {
 
 //Test getRecordFromDB()
 describe('Test getRecordFromDB()', function() {
+  this.timeout(10000);
   it('should return a country nane from DB', async() => {
     const result = await getRecordFromDB(countrySchema);
     assert.equal(result[0].names.name, 'Japan');
@@ -38,6 +39,7 @@ describe('Test getRecordFromDB()', function() {
 
 //Test capitalizeName()
 describe('Test capitalizeName()', function() {
+  this.timeout(10000);
   it('should return a capitalized the first letter of country name (test one with underscore) ', function(){
     const result = capitalizeName("south_korea");
     assert.equal(result, 'South Korea');
