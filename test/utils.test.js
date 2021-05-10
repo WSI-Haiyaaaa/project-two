@@ -30,11 +30,10 @@ describe('Test getRecordFromDB()', function() {
     assert.equal(result[0].names.name, 'Japan');
   });
 
-  it('should return expected languages from DB', async() => {
+  it('should return expected language from DB', async() => {
     const result = await getRecordFromDB(countrySchema);
-    assert.equal(6,result.length, 'expected 6 languages');
+    assert.equal(result[0].language[0].language, 'Japanese');
   });
-
 });
 
 //Test capitalizeName()
