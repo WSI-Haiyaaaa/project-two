@@ -19,7 +19,6 @@ describe('API requests on app', function() {
     return request(app)
       .get('/')
       .expect(200)
-      done();
   });
 });
 
@@ -43,7 +42,7 @@ describe('Test getRecordFromDB()', function() {
 });
 
 //Test capitalizeName()
-describe('Test capitalizeName()', function(done) {
+describe('Test capitalizeName()', function() {
 
   it('should return a capitalized the first letter of country name (test one with underscore) ', function(){
     const result = capitalizeName("south_korea");

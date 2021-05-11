@@ -110,4 +110,4 @@ function deleteCollection(model) {
   console.log("collection dropped");
 }
 
-module.exports = { fetchData,updateCountryData };
+module.exports = { fetchData, updateCountryData };
