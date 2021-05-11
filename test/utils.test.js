@@ -13,6 +13,7 @@ describe('API requests on app', function() {
   before(async function() {
     // set up database
     await connectMongoDB();
+
   });
 
   it('should return an expected GET / response', function() {
@@ -32,12 +33,12 @@ describe('Test getRecordFromDB()', function() {
   it('should return related data of the requested country', async() => {
     const result = await getRecordFromDB(countrySchema, { "names.name": "China" });
     assert.equal(result[0].names.name, 'China');
-  });
+  }).timeout(15000);
 
   it('should return related data of the requested language', async() => {
   const result = await getRecordFromDB(countrySchema, { "language.language": "Chinese" });
   assert.equal(result[0].language[0].language, 'Chinese');
-  });
+  }).timeout(15000);
 
 });
 
