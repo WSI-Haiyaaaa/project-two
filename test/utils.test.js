@@ -4,8 +4,7 @@ const assert = require("assert").strict;
 
 const request = require('supertest');
 const app = require('../app');
-const { connectMongoDB, getRecordFromDB, capitalizeName } = require('../lib/utils');
-const countrySchema = require('../models/country_schema');
+const { connectMongoDB, capitalizeName } = require('../lib/utils');
 const mongoose = require("mongoose");
 
 describe('API requests on app', function() {
@@ -13,7 +12,9 @@ describe('API requests on app', function() {
   before(async function() {
     // set up database
     await connectMongoDB();
-
+  });
+  after(function() {
+      mongoose.connection.close();
   });
 
   it('should return an expected GET / response', function() {
@@ -21,26 +22,9 @@ describe('API requests on app', function() {
       .get('/')
       .expect(200)
   });
-});
-
-//Test getRecordFromDB()
-describe('Test getRecordFromDB()', function() {
-
-  after(function() {
-      mongoose.connection.close();
-  });
-
-  it('should return related data of the requested country', async() => {
-    const result = await getRecordFromDB(countrySchema, { "names.name": "China" });
-    assert.equal(result[0].names.name, 'China');
-  }).timeout(15000);
-
-  it('should return related data of the requested language', async() => {
-  const result = await getRecordFromDB(countrySchema, { "language.language": "Chinese" });
-  assert.equal(result[0].language[0].language, 'Chinese');
-  }).timeout(15000);
 
 });
+
 
 //Test capitalizeName()
 describe('Test capitalizeName()', function() {
