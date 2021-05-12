@@ -70,14 +70,14 @@ function fetchData(url) {
     .then(res => res.json())
     .then((data) => {
       let storage = {
-        names: data.names,
-        language: data.language,
-        electricity: data.electricity,
-        telephone: data.telephone,
-        water: data.water,
-        vaccinations: data.vaccinations,
-        currency: data.currency,
-        neighbors: data.neighbors
+        "names": data.names,
+        "language": data.language,
+        "electricity": data.electricity,
+        "telephone": data.telephone,
+        "water": data.water,
+        "vaccinations": data.vaccinations,
+        "currency": data.currency,
+        "neighbors": data.neighbors
       };
       return storage;
     })
@@ -109,3 +109,5 @@ function deleteCollection(model) {
   model.collection.drop();
   console.log("collection dropped");
 }
+
+module.exports = { fetchData, updateCountryData };
